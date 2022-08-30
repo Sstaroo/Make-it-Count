@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Escena/Arquero.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 131.5, 18.5 )
+
+[node name="Main" type="Node2D"]
+
+[node name="Arquero" parent="." instance=ExtResource( 1 )]
+position = Vector2( 54, 30 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2( 150, 195 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="floor/CollisionShape2D"]
+position = Vector2( 0.500008, 0.5 )
+scale = Vector2( 4.10937, 0.578125 )
+texture = ExtResource( 2 )
