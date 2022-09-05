@@ -20,8 +20,10 @@ func _physics_process(delta):
 	velocity.y += GRAVITY 
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y = -JUMP_SPEED
-	
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
+func disparar():
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
