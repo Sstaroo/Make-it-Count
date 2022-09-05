@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/theme.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/Fonts/magofonts/mago2.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Escena/iu/main_menu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="MarginContainer"]
+margin_right = 146.0
+margin_bottom = 100.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 25.0
+margin_right = 140.0
+margin_bottom = 120.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 1 )
+text = "Make it Count"
+align = 1
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 120.0
+margin_bottom = 49.0
+rect_pivot_offset = Vector2( -120, -15 )
+text = "PLAY"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+margin_top = 53.0
+margin_right = 120.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( -120, -15 )
+text = "CREDITS"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 76.0
+margin_right = 120.0
+margin_bottom = 95.0
+rect_pivot_offset = Vector2( -120, -15 )
+text = "EXIT"
