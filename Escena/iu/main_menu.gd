@@ -1,4 +1,4 @@
-extends MarginContainer
+extends CenterContainer
 onready var play = $VBoxContainer/Play
 onready var credits = $VBoxContainer/Credits
 onready var exit = $VBoxContainer/Exit

@@ -386,3 +386,6 @@ anims/run = SubResource( 30 )
 tree_root = SubResource( 35 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 36 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
