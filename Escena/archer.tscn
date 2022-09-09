@@ -7,52 +7,42 @@
 [ext_resource path="res://Assets/Principal/death.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=58]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=59]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 64, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=60]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 128, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=61]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 192, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=62]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 256, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=63]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 320, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=64]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 384, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=65]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 448, 64, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=66]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 0, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=67]
-flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 64, 128, 64, 64 )
 
@@ -229,6 +219,7 @@ animations = [ {
 [sub_resource type="Animation" id=68]
 resource_name = "death"
 length = 3.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -492,7 +483,11 @@ script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pivot"]
 frames = SubResource( 27 )
-animation = "death"
+animation = "low_attack"
+frame = 9
+
+[node name="arrow_spawn" type="Position2D" parent="Pivot"]
+position = Vector2( 15.5, -0.5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

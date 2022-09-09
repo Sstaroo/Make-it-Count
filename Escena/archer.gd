@@ -9,6 +9,8 @@ onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 
+onready var arrow_spawn = $Pivot/arrow_spawn
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
