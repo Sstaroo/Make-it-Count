@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escena/archer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Escena/flecha.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 129.875, 16.125 )
 
 [node name="Main" type="Node2D"]
+
+[node name="Archer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 84, 39 )
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2( 86, 156 )
@@ -23,5 +27,20 @@ position = Vector2( 0.500008, 0.5 )
 scale = Vector2( 4.10937, 0.578125 )
 texture = ExtResource( 2 )
 
-[node name="Archer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 84, 39 )
+[node name="floor2" type="StaticBody2D" parent="."]
+position = Vector2( 268, 121 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2"]
+position = Vector2( 60.125, 5.875 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="floor2/CollisionShape2D"]
+position = Vector2( 0.500008, 0.5 )
+scale = Vector2( 4.10937, 0.578125 )
+texture = ExtResource( 2 )
+
+[node name="Flecha" parent="." instance=ExtResource( 3 )]
+position = Vector2( 181, 73 )
