@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(PackedScene) onready var flecha
 
 var velocity = Vector2()
-var JUMP_SPEED = 200
+var JUMP_SPEED = 230
 var SPEED = 200
 var GRAVITY = 10
 onready var pivot = $Pivot
