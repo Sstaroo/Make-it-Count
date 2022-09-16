@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=127 format=2]
 
 [ext_resource path="res://Assets/Principal/Low attack.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Principal/Idle and running.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Assets/Principal/Jumping.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Principal/death.png" type="Texture" id=5]
 [ext_resource path="res://Escena/flecha.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Principal/High Attack.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Principal/Normal Attack.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 5 )
@@ -46,6 +48,58 @@ region = Rect2( 0, 128, 64, 64 )
 [sub_resource type="AtlasTexture" id=67]
 atlas = ExtResource( 5 )
 region = Rect2( 64, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 7 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 7 )
+region = Rect2( 128, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 7 )
+region = Rect2( 256, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 7 )
+region = Rect2( 320, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 7 )
+region = Rect2( 384, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 7 )
+region = Rect2( 448, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 7 )
+region = Rect2( 64, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 7 )
+region = Rect2( 128, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 7 )
+region = Rect2( 256, 128, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
@@ -155,6 +209,50 @@ region = Rect2( 320, 256, 64, 64 )
 atlas = ExtResource( 1 )
 region = Rect2( 384, 256, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 8 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 8 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 8 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 8 )
+region = Rect2( 448, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 8 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 8 )
+region = Rect2( 128, 64, 64, 64 )
+
 [sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 64, 64, 64 )
@@ -194,6 +292,11 @@ animations = [ {
 "name": "death",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ) ],
+"loop": true,
+"name": "high_attack",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "idle",
@@ -207,6 +310,11 @@ animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,
 "name": "low_attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ) ],
+"loop": true,
+"name": "normal_attack",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
@@ -244,6 +352,35 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=104]
+resource_name = "high_attack"
+length = 1.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "high_attack" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
 }
 
 [sub_resource type="Animation" id=28]
@@ -398,6 +535,35 @@ tracks/2/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=105]
+resource_name = "normal_attack"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "normal_attack" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
+
 [sub_resource type="Animation" id=30]
 resource_name = "run"
 length = 0.8
@@ -430,6 +596,9 @@ tracks/1/keys = {
 [sub_resource type="AnimationNodeAnimation" id=69]
 animation = "death"
 
+[sub_resource type="AnimationNodeAnimation" id=106]
+animation = "high_attack"
+
 [sub_resource type="AnimationNodeAnimation" id=31]
 animation = "idle"
 
@@ -441,6 +610,9 @@ animation = "jump_start"
 
 [sub_resource type="AnimationNodeAnimation" id=75]
 animation = "low_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=107]
+animation = "normal_attack"
 
 [sub_resource type="AnimationNodeAnimation" id=32]
 animation = "run"
@@ -486,9 +658,37 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=79]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=108]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=109]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=110]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=111]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=112]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=113]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=114]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=115]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=116]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=117]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=118]
+
 [sub_resource type="AnimationNodeStateMachine" id=35]
 states/death/node = SubResource( 69 )
 states/death/position = Vector2( -152.233, 128.93 )
+states/high_attack/node = SubResource( 106 )
+states/high_attack/position = Vector2( 344.1, -97.9801 )
 states/idle/node = SubResource( 31 )
 states/idle/position = Vector2( 70, 62 )
 states/jump_fall/node = SubResource( 49 )
@@ -496,12 +696,14 @@ states/jump_fall/position = Vector2( 424.19, 224.56 )
 states/jump_start/node = SubResource( 50 )
 states/jump_start/position = Vector2( 424.19, 45.56 )
 states/low_attack/node = SubResource( 75 )
-states/low_attack/position = Vector2( 69.8556, -55.9801 )
+states/low_attack/position = Vector2( -37.1444, -97.9801 )
+states/normal_attack/node = SubResource( 107 )
+states/normal_attack/position = Vector2( 156.65, -97.9801 )
 states/run/node = SubResource( 32 )
 states/run/position = Vector2( 70, 185 )
-transitions = [ "idle", "run", SubResource( 33 ), "run", "idle", SubResource( 34 ), "idle", "jump_start", SubResource( 51 ), "jump_fall", "idle", SubResource( 52 ), "jump_start", "jump_fall", SubResource( 53 ), "idle", "jump_fall", SubResource( 54 ), "run", "jump_start", SubResource( 55 ), "jump_fall", "run", SubResource( 56 ), "run", "jump_fall", SubResource( 57 ), "death", "idle", SubResource( 70 ), "run", "death", SubResource( 71 ), "idle", "death", SubResource( 72 ), "jump_start", "death", SubResource( 73 ), "jump_fall", "death", SubResource( 74 ), "idle", "low_attack", SubResource( 76 ), "low_attack", "idle", SubResource( 77 ), "low_attack", "run", SubResource( 78 ), "low_attack", "jump_start", SubResource( 79 ) ]
+transitions = [ "idle", "run", SubResource( 33 ), "run", "idle", SubResource( 34 ), "idle", "jump_start", SubResource( 51 ), "jump_fall", "idle", SubResource( 52 ), "jump_start", "jump_fall", SubResource( 53 ), "idle", "jump_fall", SubResource( 54 ), "run", "jump_start", SubResource( 55 ), "jump_fall", "run", SubResource( 56 ), "run", "jump_fall", SubResource( 57 ), "death", "idle", SubResource( 70 ), "run", "death", SubResource( 71 ), "idle", "death", SubResource( 72 ), "jump_start", "death", SubResource( 73 ), "jump_fall", "death", SubResource( 74 ), "idle", "low_attack", SubResource( 76 ), "low_attack", "idle", SubResource( 77 ), "low_attack", "run", SubResource( 78 ), "low_attack", "jump_start", SubResource( 79 ), "idle", "high_attack", SubResource( 108 ), "high_attack", "idle", SubResource( 109 ), "high_attack", "run", SubResource( 110 ), "high_attack", "jump_start", SubResource( 111 ), "high_attack", "death", SubResource( 112 ), "low_attack", "death", SubResource( 113 ), "normal_attack", "death", SubResource( 114 ), "normal_attack", "idle", SubResource( 115 ), "normal_attack", "run", SubResource( 116 ), "normal_attack", "jump_start", SubResource( 117 ), "idle", "normal_attack", SubResource( 118 ) ]
 start_node = "idle"
-graph_offset = Vector2( -237.9, -93.9801 )
+graph_offset = Vector2( -270.45, -116.083 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=36]
 
@@ -515,7 +717,7 @@ flecha = ExtResource( 6 )
 position = Vector2( 0, -3 )
 frames = SubResource( 27 )
 animation = "low_attack"
-frame = 10
+frame = 11
 
 [node name="arrow_spawn" type="Position2D" parent="Pivot"]
 position = Vector2( 19, -2 )
@@ -526,10 +728,12 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
 anims/death = SubResource( 68 )
+anims/high_attack = SubResource( 104 )
 anims/idle = SubResource( 28 )
 anims/jump_fall = SubResource( 47 )
 anims/jump_start = SubResource( 48 )
 anims/low_attack = SubResource( 29 )
+anims/normal_attack = SubResource( 105 )
 anims/run = SubResource( 30 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]

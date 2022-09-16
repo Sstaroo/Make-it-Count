@@ -51,6 +51,10 @@ func _physics_process(delta):
 			playback.travel("idle")
 			if Input.is_action_just_pressed("low_attack"):
 				playback.travel("low_attack")
+			if Input.is_action_just_pressed("high_attack"):
+				playback.travel("high_attack")
+			if Input.is_action_just_pressed("normal_attack"):
+				playback.travel("normal_attack")
 
 	else:
 		if velocity.y < 0:
