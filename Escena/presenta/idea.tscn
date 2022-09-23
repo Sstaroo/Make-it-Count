@@ -297,12 +297,19 @@ margin_right = 221.0
 margin_bottom = 126.0
 text = "La Idea:"
 
+[node name="Button" type="Button" parent="Label"]
+margin_left = 164.0
+margin_top = 142.0
+margin_right = 212.0
+margin_bottom = 174.0
+text = "next"
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 97, 172 )
+position = Vector2( 287, 176 )
 scale = Vector2( 0.339508, 0.275449 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 285.5, 172 )
+position = Vector2( 98, 176 )
 scale = Vector2( 0.323529, 0.283988 )
 texture = ExtResource( 1 )
