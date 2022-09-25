@@ -4,9 +4,10 @@ onready var credits = $VBoxContainer/Credits
 onready var exit = $VBoxContainer/Exit
 onready var tutorial = $VBoxContainer/Tutorial
 
+
 func _ready():
-	if $AudioStreamPlayer.playing == false:
-		$AudioStreamPlayer.play()
+	if  $musicamenu.play()== false:
+		 $musicamenu.play()
 	play.connect("pressed",self,"_on_play_pressed")
 	credits.connect("pressed",self,"_on_credits_pressed")
 	exit.connect("pressed",self,"_on_exit_pressed")

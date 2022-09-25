@@ -223,7 +223,7 @@ margin_right = 120.0
 margin_bottom = 118.0
 text = "TUTORIAL"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musicamenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -8.739
 autoplay = true
