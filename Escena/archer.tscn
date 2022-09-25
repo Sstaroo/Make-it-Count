@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=2]
+[gd_scene load_steps=131 format=2]
 
 [ext_resource path="res://Assets/Principal/Low attack.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Principal/Idle and running.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Escena/flecha.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Principal/High Attack.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Principal/Normal Attack.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Principal/heart/Copia de heart-icon.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fonts/magofonts/mago2.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 5 )
@@ -707,6 +709,15 @@ graph_offset = Vector2( -270.45, -116.083 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=36]
 
+[sub_resource type="DynamicFont" id=119]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="Theme" id=120]
+default_font = SubResource( 119 )
+
 [node name="Archer" type="KinematicBody2D"]
 script = ExtResource( 3 )
 flecha = ExtResource( 6 )
@@ -743,3 +754,51 @@ parameters/playback = SubResource( 36 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Lives" type="Label" parent="CanvasLayer"]
+margin_left = 7.0
+margin_right = 49.0
+margin_bottom = 26.0
+theme = SubResource( 120 )
+text = "Lives:"
+
+[node name="heart_1" type="TextureProgress" parent="CanvasLayer"]
+margin_left = 48.0
+margin_top = 9.10063
+margin_right = 65.0
+margin_bottom = 25.1006
+rect_rotation = -0.339152
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 9 )
+tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
+
+[node name="heart_2" type="TextureProgress" parent="CanvasLayer"]
+margin_left = 60.0
+margin_top = 9.10063
+margin_right = 77.0
+margin_bottom = 25.1006
+rect_rotation = -0.339152
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 9 )
+tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
+
+[node name="heart_3" type="TextureProgress" parent="CanvasLayer"]
+margin_left = 72.0
+margin_top = 9.10063
+margin_right = 89.0
+margin_bottom = 25.1006
+rect_rotation = -0.339152
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 9 )
+tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
