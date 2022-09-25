@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tutorial - 25-09-22 18.15.mp3-a4d294cbd2b85d5019b6ae30686ec579.mp3str"
+
+[deps]
+
+source_file="res://music/background/Tutorial - 25-09-22 18.15.mp3"
+dest_files=[ "res://.import/Tutorial - 25-09-22 18.15.mp3-a4d294cbd2b85d5019b6ae30686ec579.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

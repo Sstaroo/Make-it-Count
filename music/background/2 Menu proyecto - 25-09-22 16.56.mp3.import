@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2 Menu proyecto - 25-09-22 16.56.mp3-8167ab77862dd8e379b5defe0785cacb.mp3str"
+
+[deps]
+
+source_file="res://music/background/2 Menu proyecto - 25-09-22 16.56.mp3"
+dest_files=[ "res://.import/2 Menu proyecto - 25-09-22 16.56.mp3-8167ab77862dd8e379b5defe0785cacb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

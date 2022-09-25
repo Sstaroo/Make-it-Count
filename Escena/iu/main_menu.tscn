@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/Fonts/magofonts/mago2.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_night2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_night3.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_night1.png" type="Texture" id=7]
+[ext_resource path="res://music/background/2 Menu proyecto - 25-09-22 16.56.mp3" type="AudioStream" id=8]
 
 [sub_resource type="TileSet" id=2]
 0/name = "bakcground_night1.png 0"
@@ -221,3 +222,8 @@ margin_top = 99.0
 margin_right = 120.0
 margin_bottom = 118.0
 text = "TUTORIAL"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -8.739
+autoplay = true
