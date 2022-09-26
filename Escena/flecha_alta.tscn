@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Principal/flecha.png" type="Texture" id=1]
+[ext_resource path="res://Escena/flecha_alta.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.5, 1 )
+
+[node name="flecha_alta" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+GRAVITY_factor = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="CollisionShape2D"]
+texture = ExtResource( 1 )

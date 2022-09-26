@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://Assets/Principal/Low attack.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Principal/Idle and running.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Assets/Principal/Normal Attack.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Principal/heart/Copia de heart-icon.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Fonts/magofonts/mago2.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Escena/flecha_alta.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Escena/flecha_normal.tscn" type="PackedScene" id=12]
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 5 )
@@ -384,6 +386,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
 }
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_disparar_high"
+} ]
+}
 
 [sub_resource type="Animation" id=28]
 resource_name = "idle"
@@ -565,6 +581,20 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_disparar_normal"
+} ]
+}
 
 [sub_resource type="Animation" id=30]
 resource_name = "run"
@@ -705,7 +735,7 @@ states/run/node = SubResource( 32 )
 states/run/position = Vector2( 70, 185 )
 transitions = [ "idle", "run", SubResource( 33 ), "run", "idle", SubResource( 34 ), "idle", "jump_start", SubResource( 51 ), "jump_fall", "idle", SubResource( 52 ), "jump_start", "jump_fall", SubResource( 53 ), "idle", "jump_fall", SubResource( 54 ), "run", "jump_start", SubResource( 55 ), "jump_fall", "run", SubResource( 56 ), "run", "jump_fall", SubResource( 57 ), "death", "idle", SubResource( 70 ), "run", "death", SubResource( 71 ), "idle", "death", SubResource( 72 ), "jump_start", "death", SubResource( 73 ), "jump_fall", "death", SubResource( 74 ), "idle", "low_attack", SubResource( 76 ), "low_attack", "idle", SubResource( 77 ), "low_attack", "run", SubResource( 78 ), "low_attack", "jump_start", SubResource( 79 ), "idle", "high_attack", SubResource( 108 ), "high_attack", "idle", SubResource( 109 ), "high_attack", "run", SubResource( 110 ), "high_attack", "jump_start", SubResource( 111 ), "high_attack", "death", SubResource( 112 ), "low_attack", "death", SubResource( 113 ), "normal_attack", "death", SubResource( 114 ), "normal_attack", "idle", SubResource( 115 ), "normal_attack", "run", SubResource( 116 ), "normal_attack", "jump_start", SubResource( 117 ), "idle", "normal_attack", SubResource( 118 ) ]
 start_node = "idle"
-graph_offset = Vector2( -270.45, -116.083 )
+graph_offset = Vector2( -231.075, -163.281 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=36]
 
@@ -719,19 +749,29 @@ font_data = ExtResource( 10 )
 default_font = SubResource( 119 )
 
 [node name="Archer" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource( 3 )
 flecha = ExtResource( 6 )
+flecha_normal = ExtResource( 12 )
+flecha_alta = ExtResource( 11 )
 
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pivot"]
 position = Vector2( 0, -3 )
 frames = SubResource( 27 )
-animation = "low_attack"
-frame = 11
+animation = "normal_attack"
+frame = 8
 
 [node name="arrow_spawn" type="Position2D" parent="Pivot"]
 position = Vector2( 19, -2 )
+
+[node name="high_arrow_spawn" type="Position2D" parent="Pivot"]
+position = Vector2( 14, -16 )
+
+[node name="normal_arrow_spawn" type="Position2D" parent="Pivot"]
+position = Vector2( 15, -9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

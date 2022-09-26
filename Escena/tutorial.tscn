@@ -948,13 +948,35 @@ align = 1
 valign = 1
 
 [node name="Low Attack" type="Label" parent="."]
-margin_left = 687.0
+margin_left = 682.0
 margin_top = 190.0
-margin_right = 800.0
+margin_right = 795.0
 margin_bottom = 228.0
 theme = SubResource( 29 )
 text = "Shoot a Low Attack
-whith F"
+with F"
+align = 1
+valign = 1
+
+[node name="High Attack" type="Label" parent="."]
+margin_left = 1031.0
+margin_top = 145.0
+margin_right = 1149.0
+margin_bottom = 183.0
+theme = SubResource( 29 )
+text = "Shoot a High Attack
+with D"
+align = 1
+valign = 1
+
+[node name="High Attack2" type="Label" parent="."]
+margin_left = 1293.0
+margin_top = 86.0
+margin_right = 1423.0
+margin_bottom = 124.0
+theme = SubResource( 29 )
+text = "Shoot a Normal Attack
+with G"
 align = 1
 valign = 1
 

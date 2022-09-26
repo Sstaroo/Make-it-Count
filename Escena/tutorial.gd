@@ -10,8 +10,6 @@ onready var menu = $Menu
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-		if $musicaTut.play() == false:
-			$musicaTut.play()
 		menu.connect("pressed",self,"_on_menu_pressed")
 		
 	# Replace with function body.
