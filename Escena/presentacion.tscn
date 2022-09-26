@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day1.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Fonts/magofonts/mago1.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day3.png" type="Texture" id=8]
 [ext_resource path="res://Escena/presentacion.gd" type="Script" id=9]
+[ext_resource path="res://Escena/bee.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -292,3 +293,6 @@ margin_right = 120.0
 margin_bottom = 49.0
 theme = SubResource( 13 )
 text = "Play!"
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 267, 228 )

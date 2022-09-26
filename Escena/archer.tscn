@@ -761,8 +761,7 @@ flecha_alta = ExtResource( 11 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pivot"]
 position = Vector2( 0, -3 )
 frames = SubResource( 27 )
-animation = "normal_attack"
-frame = 8
+animation = "death"
 
 [node name="arrow_spawn" type="Position2D" parent="Pivot"]
 position = Vector2( 19, -2 )
@@ -826,7 +825,7 @@ margin_right = 77.0
 margin_bottom = 25.1006
 rect_rotation = -0.339152
 max_value = 2.0
-value = 2.0
+value = 1.0
 texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
@@ -838,7 +837,6 @@ margin_right = 89.0
 margin_bottom = 25.1006
 rect_rotation = -0.339152
 max_value = 2.0
-value = 2.0
 texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
