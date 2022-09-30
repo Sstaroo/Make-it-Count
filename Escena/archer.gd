@@ -20,6 +20,7 @@ export(int) var x_normal = 200
 export(int) var y_normal = 0
 export(int) var x_down = 250
 export(int) var y_down = 0
+export(bool) var has_arrow = true
 
 
 onready var arrow_spawn = $Pivot/arrow_spawn
@@ -61,11 +62,11 @@ func _physics_process(delta):
 			playback.travel("run")
 		else: 
 			playback.travel("idle")
-			if Input.is_action_just_pressed("low_attack"):
+			if Input.is_action_just_pressed("low_attack") and has_arrow:
 				playback.travel("low_attack")
-			if Input.is_action_just_pressed("high_attack"):
+			if Input.is_action_just_pressed("high_attack") and has_arrow:
 				playback.travel("high_attack")
-			if Input.is_action_just_pressed("normal_attack"):
+			if Input.is_action_just_pressed("normal_attack") and has_arrow:
 				playback.travel("normal_attack")
 
 	else:
@@ -80,6 +81,7 @@ func _disparar():
 	arrow.init(Vector2(x_down*pivot.scale.x,y_down*pivot.scale.y), 1.0 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow)
 	arrow.global_position = arrow_spawn.global_position
+	has_arrow = false
 	if pivot.scale.x == -1:
 		arrow.rotation = PI
 
@@ -88,6 +90,7 @@ func _disparar_high():
 	arrow_alta.init(Vector2(x_high*pivot.scale.x,y_high*pivot.scale.y), 0.3 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow_alta)
 	arrow_alta.global_position = high_spawn.global_position
+	has_arrow = false
 	if pivot.scale.x == -1:
 		arrow_alta.rotation = PI
 
@@ -97,6 +100,7 @@ func _disparar_normal():
 	arrow_normal.init(Vector2(x_normal*pivot.scale.x,y_normal*pivot.scale.y), 1.0 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow_normal)
 	arrow_normal.global_position = normal_spawn.global_position
+	has_arrow = false
 	if pivot.scale.x == -1:
 		arrow_normal.rotation = PI
 # Called every frame. 'delta' is the elapsed time since the previous frame.
