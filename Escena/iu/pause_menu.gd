@@ -22,5 +22,6 @@ func _on_resume_pressed():
 	
 func _on_main_menu_pressed():
 	get_tree().change_scene("res://Escena/iu/main_menu.tscn")
+	get_tree().paused = false
 func _on_exit_pressed():
 	get_tree().quit()
