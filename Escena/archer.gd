@@ -77,8 +77,8 @@ func _physics_process(delta):
 	
 
 func _disparar():
-	var arrow = flecha.instance()
-	arrow.init(Vector2(x_down*pivot.scale.x,y_down*pivot.scale.y), 1.0 ) # -> vector de velocidad que necesitemos
+	var arrow = flecha_alta.instance()
+	arrow.init(Vector2(x_down*pivot.scale.x,y_down*pivot.scale.y), 0.3 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow)
 	arrow.global_position = arrow_spawn.global_position
 	has_arrow = false
@@ -96,8 +96,8 @@ func _disparar_high():
 
 
 func _disparar_normal():
-	var arrow_normal = flecha_normal.instance()
-	arrow_normal.init(Vector2(x_normal*pivot.scale.x,y_normal*pivot.scale.y), 1.0 ) # -> vector de velocidad que necesitemos
+	var arrow_normal = flecha_alta.instance()
+	arrow_normal.init(Vector2(x_normal*pivot.scale.x,y_normal*pivot.scale.y), 0.33 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow_normal)
 	arrow_normal.global_position = normal_spawn.global_position
 	has_arrow = false

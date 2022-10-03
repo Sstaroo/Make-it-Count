@@ -5,7 +5,7 @@
 [ext_resource path="res://Escena/archer.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Principal/Jumping.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Principal/death.png" type="Texture" id=5]
-[ext_resource path="res://Escena/flecha.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Escena/iu/pause_menu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Principal/High Attack.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Principal/Normal Attack.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Principal/heart/Copia de heart-icon.png" type="Texture" id=9]
@@ -696,7 +696,6 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=110]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=111]
 
@@ -710,7 +709,6 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=116]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=117]
 
@@ -752,9 +750,13 @@ default_font = SubResource( 119 )
 collision_layer = 2
 collision_mask = 5
 script = ExtResource( 3 )
-flecha = ExtResource( 6 )
+flecha = ExtResource( 11 )
 flecha_normal = ExtResource( 12 )
 flecha_alta = ExtResource( 11 )
+x_normal = 400
+y_normal = -30
+x_down = 2500
+y_down = -30
 
 [node name="Pivot" type="Node2D" parent="."]
 
@@ -840,3 +842,9 @@ max_value = 2.0
 texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
+margin_left = 66.0
+margin_top = 47.0
+margin_right = -50.0
+margin_bottom = -60.0
