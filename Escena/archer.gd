@@ -27,17 +27,13 @@ onready var arrow_spawn = $Pivot/arrow_spawn
 onready var high_spawn = $Pivot/high_arrow_spawn
 onready var normal_spawn = $Pivot/normal_arrow_spawn
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	anim_tree.active = true
 	# Replace with function body.
 func _physics_process(delta):
 	
+	#MOVEMENT
 	var move_input = Input.get_axis("move_left","move_right")
 	
 	velocity.x = lerp(move_input * SPEED, velocity.x, 0.8)
@@ -53,6 +49,16 @@ func _physics_process(delta):
 		pivot.scale.x = 1
 	if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
 		pivot.scale.x = -1
+		
+	#COLLISIONS
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if (collision.collider.collision_layer) & 4:
+			var enemy: Node2D = collision.collider
+			var direction = (global_position - enemy.global_position).normalized()
+			velocity = direction * SPEED * 2
+			
+			
 
 
 
@@ -75,7 +81,7 @@ func _physics_process(delta):
 		else:
 			playback.travel("jump_fall")
 	
-
+#SKILLS
 func _disparar():
 	var arrow = flecha_alta.instance()
 	arrow.init(Vector2(x_down*pivot.scale.x,y_down*pivot.scale.y), 0.3 ) # -> vector de velocidad que necesitemos

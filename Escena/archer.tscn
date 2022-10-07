@@ -747,7 +747,7 @@ font_data = ExtResource( 10 )
 default_font = SubResource( 119 )
 
 [node name="Archer" type="KinematicBody2D"]
-collision_layer = 2
+collision_layer = 3
 collision_mask = 5
 script = ExtResource( 3 )
 flecha = ExtResource( 11 )
@@ -796,19 +796,19 @@ parameters/playback = SubResource( 36 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Lifes" type="CanvasLayer" parent="."]
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Lives" type="Label" parent="CanvasLayer"]
+[node name="Lives" type="Label" parent="Lifes"]
 margin_left = 7.0
 margin_right = 49.0
 margin_bottom = 26.0
 theme = SubResource( 120 )
 text = "Lives:"
 
-[node name="heart_1" type="TextureProgress" parent="CanvasLayer"]
+[node name="heart_1" type="TextureProgress" parent="Lifes"]
 margin_left = 48.0
 margin_top = 9.10063
 margin_right = 65.0
@@ -820,7 +820,7 @@ texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
 
-[node name="heart_2" type="TextureProgress" parent="CanvasLayer"]
+[node name="heart_2" type="TextureProgress" parent="Lifes"]
 margin_left = 60.0
 margin_top = 9.10063
 margin_right = 77.0
@@ -832,7 +832,7 @@ texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
 
-[node name="heart_3" type="TextureProgress" parent="CanvasLayer"]
+[node name="heart_3" type="TextureProgress" parent="Lifes"]
 margin_left = 72.0
 margin_top = 9.10063
 margin_right = 89.0
@@ -843,7 +843,7 @@ texture_under = ExtResource( 9 )
 texture_progress = ExtResource( 9 )
 tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
 
-[node name="MainMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
+[node name="MainMenu" parent="Lifes" instance=ExtResource( 6 )]
 margin_left = 66.0
 margin_top = 47.0
 margin_right = -50.0
