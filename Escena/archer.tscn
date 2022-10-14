@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=2]
+[gd_scene load_steps=134 format=2]
 
 [ext_resource path="res://Assets/Principal/Low attack.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Principal/Idle and running.png" type="Texture" id=2]
@@ -746,6 +746,8 @@ font_data = ExtResource( 10 )
 [sub_resource type="Theme" id=120]
 default_font = SubResource( 119 )
 
+[sub_resource type="CapsuleShape2D" id=121]
+
 [node name="Archer" type="KinematicBody2D"]
 collision_layer = 3
 collision_mask = 5
@@ -848,3 +850,10 @@ margin_left = 66.0
 margin_top = 47.0
 margin_right = -50.0
 margin_bottom = -60.0
+
+[node name="AreaTakeArrow" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTakeArrow"]
+shape = SubResource( 121 )

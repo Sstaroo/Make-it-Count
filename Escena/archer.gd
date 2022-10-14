@@ -13,6 +13,7 @@ onready var sprite = $AnimatedSprite
 onready var anim_player = $AnimationPlayer 
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
+onready var area = $AreaTakeArrow/CollisionShape2D
 
 export(int) var x_high = 150
 export(int) var y_high = -100
@@ -57,8 +58,14 @@ func _physics_process(delta):
 			var enemy: Node2D = collision.collider
 			var direction = (global_position - enemy.global_position).normalized()
 			velocity = direction * SPEED * 2
+		if (collision.collider.collision_layer) & 8:
+			has_arrow = true
+			collision.collider.queue_free()
 			
 			
+	
+	
+			#flecha_alta.queue_free()
 
 
 
@@ -97,7 +104,7 @@ func _disparar_high():
 	get_parent().add_child(arrow_alta)
 	arrow_alta.global_position = high_spawn.global_position
 	has_arrow = false
-	if pivot.scale.x == -1:
+	if pivot.scale.x == 1:
 		arrow_alta.rotation = PI
 
 
