@@ -1033,4 +1033,4 @@ volume_db = -14.611
 autoplay = true
 
 [node name="Skeleton" parent="." instance=ExtResource( 13 )]
-position = Vector2( 433, 227 )
+position = Vector2( 91, 223 )

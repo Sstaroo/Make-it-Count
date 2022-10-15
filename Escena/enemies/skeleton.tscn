@@ -1,9 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/idle-1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/idle-4.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/idle-3.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/idle-2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/walk-3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/walk-2.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/walk-4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/walk-6.png" type="Texture" id=8]
+[ext_resource path="res://Escena/enemies/skeleton.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/walk-5.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Enemies/HeroandOpponents_v1/1 Enemy/PNG/walk-1.png" type="Texture" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -21,31 +28,64 @@ region = Rect2( 0, 0, 64, 96 )
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 64, 96 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 64, 96 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 64, 96 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 64, 96 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 64, 96 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 64, 96 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 96 )
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "New Anim",
-"speed": 5.0
+"name": "idle",
+"speed": 12.0
 }, {
-"frames": [  ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
-"name": "default",
+"name": "walking",
 "speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=6]
-height = 28.0
+height = 30.0
 
 [node name="Skeleton" type="KinematicBody2D"]
 collision_layer = 5
 collision_mask = 5
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -10, -16 )
 scale = Vector2( 0.9375, 0.822917 )
 frames = SubResource( 5 )
-animation = "New Anim"
+animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 6 )
+
+[node name="RayCast2D" type="RayCast2D" parent="CollisionShape2D"]
+position = Vector2( 10, 0 )
+enabled = true
+cast_to = Vector2( 0, 26 )
