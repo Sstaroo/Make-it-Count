@@ -8,12 +8,17 @@ var velocity = Vector2()
 var JUMP_SPEED = 230
 var SPEED = 200
 var GRAVITY = 10
+
 onready var pivot = $Pivot
 onready var sprite = $AnimatedSprite
 onready var anim_player = $AnimationPlayer 
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
-onready var area = $AreaTakeArrow/CollisionShape2D
+
+onready var heart_1 =$Lifes/Lives/heart_1
+onready var heart_2 =$Lifes/Lives/heart_2
+onready var heart_3 =$Lifes/Lives/heart_3
+onready var hearts = [heart_1, heart_2, heart_3]
 
 export(int) var x_high = 150
 export(int) var y_high = -100
@@ -22,7 +27,6 @@ export(int) var y_normal = 0
 export(int) var x_down = 250
 export(int) var y_down = 0
 export(bool) var has_arrow = true
-
 
 onready var arrow_spawn = $Pivot/arrow_spawn
 onready var high_spawn = $Pivot/high_arrow_spawn
@@ -58,14 +62,10 @@ func _physics_process(delta):
 			var enemy: Node2D = collision.collider
 			var direction = (global_position - enemy.global_position).normalized()
 			velocity = direction * SPEED * 2
+			_health_loss()
 		if (collision.collider.collision_layer) & 8:
 			has_arrow = true
 			collision.collider.queue_free()
-			
-			
-	
-	
-			#flecha_alta.queue_free()
 
 
 
@@ -81,13 +81,13 @@ func _physics_process(delta):
 				playback.travel("high_attack")
 			if Input.is_action_just_pressed("normal_attack") and has_arrow:
 				playback.travel("normal_attack")
-
 	else:
 		if velocity.y < 0:
 			playback.travel("jump_start")
 		else:
 			playback.travel("jump_fall")
-	
+
+
 #SKILLS
 func _disparar():
 	var arrow = flecha_alta.instance()
@@ -116,6 +116,13 @@ func _disparar_normal():
 	has_arrow = false
 	if pivot.scale.x == -1:
 		arrow_normal.rotation = PI
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+#Health
+func _health_loss():
+	var heart_affected = heart_1
+	for heart in hearts:
+		if heart.value > 0:
+			heart_affected = heart
+	heart_affected.value -= 1
+#	heart_affected.value = (heart_affected.value - 1)
+#	print(heart_affected.value)
