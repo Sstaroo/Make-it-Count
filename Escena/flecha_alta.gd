@@ -13,17 +13,11 @@ func _physics_process(delta):
 		return
 	rotation = velocity.angle()
 	print(is_on_floor())
-	#print(velocity)
 	if velocity.y > 0:
 		velocity.y += GRAVITY*delta*GRAVITY_factor
 	else:
 		velocity.y += GRAVITY*delta
 	move_and_slide(velocity,Vector2.UP)
-#	if is_on_floor():
-#		staystill = true
-#		velocity.y = GRAVITY*delta
-#		print("hola")
-#	collision_layer = 
 	
 	if is_on_wall():
 		if arrow_bounce < 0.001:
@@ -39,26 +33,9 @@ func _physics_process(delta):
 			staystill = true
 		velocity.y *= -1*arrow_bounce
 		
-func _end_arrow():
-	queue_free()
+#func _end_arrow():
+#	queue_free()
 
 func init(new_velocity : Vector2, new_bounce : float) -> void:
 	velocity = new_velocity
 	arrow_bounce = new_bounce
-	
-#func delete():
-#	queue_free()
-	
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

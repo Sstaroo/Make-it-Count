@@ -4,6 +4,8 @@ export(PackedScene) onready var flecha
 export(PackedScene) onready var flecha_normal
 export(PackedScene) onready var flecha_alta
 
+const death_menu = preload("res://Escena/iu/death_menu.tscn")
+
 var velocity = Vector2()
 var JUMP_SPEED = 230
 var SPEED = 200
@@ -71,7 +73,13 @@ func _physics_process(delta):
 
 #ANIMATIONS
 	if is_on_floor():
-		if abs(velocity.x) > 100:
+		if heart_1.value == 0:
+			velocity.x = 0
+			velocity.y = 0
+			playback.travel("death")
+			
+			
+		elif abs(velocity.x) > 100:
 			playback.travel("run")
 		else: 
 			playback.travel("idle")
@@ -91,7 +99,7 @@ func _physics_process(delta):
 #SKILLS
 func _disparar():
 	var arrow = flecha_alta.instance()
-	arrow.init(Vector2(x_down*pivot.scale.x,y_down*pivot.scale.y), 0.3 ) # -> vector de velocidad que necesitemos
+	arrow.init(Vector2(x_down*pivot.scale.x,y_down*pivot.scale.y), 0.06 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow)
 	arrow.global_position = arrow_spawn.global_position
 	has_arrow = false
@@ -104,13 +112,13 @@ func _disparar_high():
 	get_parent().add_child(arrow_alta)
 	arrow_alta.global_position = high_spawn.global_position
 	has_arrow = false
-	if pivot.scale.x == 1:
-		arrow_alta.rotation = PI
+	if pivot.scale.x == -1:
+		arrow_alta.rotation = PI 
 
 
 func _disparar_normal():
 	var arrow_normal = flecha_alta.instance()
-	arrow_normal.init(Vector2(x_normal*pivot.scale.x,y_normal*pivot.scale.y), 0.33 ) # -> vector de velocidad que necesitemos
+	arrow_normal.init(Vector2(x_normal*pivot.scale.x,y_normal*pivot.scale.y), 0.38 ) # -> vector de velocidad que necesitemos
 	get_parent().add_child(arrow_normal)
 	arrow_normal.global_position = normal_spawn.global_position
 	has_arrow = false
@@ -124,5 +132,6 @@ func _health_loss():
 		if heart.value > 0:
 			heart_affected = heart
 	heart_affected.value -= 1
-#	heart_affected.value = (heart_affected.value - 1)
-#	print(heart_affected.value)
+
+
+
