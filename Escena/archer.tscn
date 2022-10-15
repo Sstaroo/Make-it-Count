@@ -746,6 +746,7 @@ font_data = ExtResource( 10 )
 default_font = SubResource( 119 )
 
 [node name="Archer" type="KinematicBody2D"]
+z_index = 1
 collision_layer = 3
 collision_mask = 5
 script = ExtResource( 3 )
@@ -856,3 +857,9 @@ margin_left = 3.0
 margin_top = 2.0
 margin_right = 404.0
 margin_bottom = 295.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

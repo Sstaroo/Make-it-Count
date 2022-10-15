@@ -68,6 +68,8 @@ func _physics_process(delta):
 		if (collision.collider.collision_layer) & 8:
 			has_arrow = true
 			collision.collider.queue_free()
+			
+	#
 
 
 
@@ -77,8 +79,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			velocity.y = 0
 			playback.travel("death")
-			
-			
+			$Timer.start()
 		elif abs(velocity.x) > 100:
 			playback.travel("run")
 		else: 
@@ -135,3 +136,10 @@ func _health_loss():
 
 
 
+
+
+
+func _on_Timer_timeout():
+	get_tree().paused
+	get_tree().change_scene("res://Escena/iu/death_menu.tscn")
+	 # Replace with function body.

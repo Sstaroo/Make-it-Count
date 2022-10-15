@@ -33,8 +33,7 @@ func _physics_process(delta):
 			staystill = true
 		velocity.y *= -1*arrow_bounce
 		
-#func _end_arrow():
-#	queue_free()
+
 
 func init(new_velocity : Vector2, new_bounce : float) -> void:
 	velocity = new_velocity
