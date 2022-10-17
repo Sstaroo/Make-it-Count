@@ -38,3 +38,7 @@ func _physics_process(delta):
 func init(new_velocity : Vector2, new_bounce : float) -> void:
 	velocity = new_velocity
 	arrow_bounce = new_bounce
+
+
+func _on_Area2D_body_entered(body):
+	body.take_damage(1) 

@@ -6,19 +6,22 @@ var GRAVITY = 10
 var direction = 1
 var is_dead = false
 var health = 3
-onready var Ray = $CollisionShape2D/RayCast2D
-
-
+onready var Ray = $pivot/RayCast2D
+onready var AnimSprite = $pivot/AnimatedSprite
+onready var collShape = $CollisionShape2D
+onready var timer = $Timer
+onready var pivot = $pivot
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite.play("walking") 
+	AnimSprite.play("walking") 
 
 func dead():
 	is_dead = true
 	velocity = Vector2(0,0)
-	$AnimatedSprite.play("dead")
-	$CollisionShape2D.disabled = true
-	$Timer.start()
+	AnimSprite.play("dead")
+	collShape.disabled = true
+	timer.start()
+
 
 func _physics_process(delta):
 	if is_dead == false:
@@ -27,27 +30,22 @@ func _physics_process(delta):
 		velocity = move_and_slide(velocity, Vector2.UP)
 
 		#Continuous movement
-		if direction == 1:
-			$AnimatedSprite.flip_h = false
-		else:
-			$AnimatedSprite.flip_h = true
-		for i in get_slide_count():
-			var collision = get_slide_collision(i)
-			if (collision.collider.collision_layer) & 8:
-				health -= 1
-		if health == 0:
-			dead()
+#		AnimSprite.flip_h = direction !=1
+		
 	if is_on_floor():
 	#Stopping before falls
 		if not Ray.is_colliding():
 			direction = direction * -1
-			Ray.position.x *= -1
+			pivot.scale.x *= -1
 	#Turning around when wall
 		if is_on_wall():
 			direction = direction * -1
-			Ray.position.x *= -1
+			pivot.scale.x *= -1
 
-
+func take_damage(dmg):
+	health -= 1
+	if health <= 0:
+		dead()
 
 func _on_Timer_timeout():
 	queue_free()

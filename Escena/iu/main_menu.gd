@@ -11,7 +11,7 @@ func _ready():
 	credits.connect("pressed",self,"_on_credits_pressed")
 	exit.connect("pressed",self,"_on_exit_pressed")
 	tutorial.connect("pressed",self,"_on_tutorial_pressed")
-	
+	play.grab_focus()
 	
 
 

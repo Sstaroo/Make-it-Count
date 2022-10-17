@@ -13,6 +13,7 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("pause"):
 		visible = !visible
+		resume.grab_focus()
 		get_tree().paused = visible
 		
 	

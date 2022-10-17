@@ -12,7 +12,7 @@ var SPEED = 200
 var GRAVITY = 10
 
 onready var pivot = $Pivot
-onready var sprite = $AnimatedSprite
+onready var sprite = $Pivot/AnimatedSprite
 onready var anim_player = $AnimationPlayer 
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
@@ -37,6 +37,7 @@ onready var normal_spawn = $Pivot/normal_arrow_spawn
 
 func _ready():
 	anim_tree.active = true
+	$Lifes/death_menu.visible = false
 	# Replace with function body.
 func _physics_process(delta):
 	
@@ -58,19 +59,13 @@ func _physics_process(delta):
 		pivot.scale.x = -1
 		
 	#COLLISIONS
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		if (collision.collider.collision_layer) & 4:
-			var enemy: Node2D = collision.collider
-			var direction = (global_position - enemy.global_position).normalized()
-			velocity = direction * SPEED * 2
-			_health_loss()
-		if (collision.collider.collision_layer) & 8:
-			has_arrow = true
-			collision.collider.queue_free()
-			
-	#
-
+#	for i in get_slide_count():
+#		var collision = get_slide_collision(i)
+#		if (collision.collider.collision_layer) & 4:
+#			var enemy: Node2D = collision.collider
+#			var direction = (global_position - enemy.global_position).normalized()
+#			velocity = direction * SPEED * 2
+#			_health_loss()
 
 
 #ANIMATIONS
@@ -79,7 +74,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			velocity.y = 0
 			playback.travel("death")
-			$Timer.start()
+			
 		elif abs(velocity.x) > 100:
 			playback.travel("run")
 		else: 
@@ -135,11 +130,23 @@ func _health_loss():
 	heart_affected.value -= 1
 
 
+func dead():
+	$Lifes/death_menu.highlight_button()
 
 
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "death":
+		get_tree().paused = true
+		$Lifes/death_menu.visible = true
 
 
-func _on_Timer_timeout():
-	get_tree().paused
-	get_tree().change_scene("res://Escena/iu/death_menu.tscn")
-	 # Replace with function body.
+func _on_Area2D_body_entered(body):
+	has_arrow = true
+	body.queue_free() 
+
+
+func _on_Area2D2_body_entered(body):
+	var direction = (global_position - body.global_position).normalized()
+	velocity = direction * SPEED * 2
+	velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
+	_health_loss()
