@@ -43,7 +43,7 @@ onready var camera = $Camera2D
 func _ready():
 	anim_tree.active = true
 	death_menu.visible = false
-	get_limit()
+#	get_limit()
 	
 func _physics_process(delta):
 	
@@ -139,13 +139,13 @@ func _health_loss():
 func dead():
 	death_menu.highlight_button()
 
-func get_limit():
-	var upper_limit: Position2D = actual_level.get_node("Limits/limit_upper_left")
-	var downer_limit: Position2D = actual_level.get_node("Limits/limit_downer_right")
-	camera.limit_left = upper_limit.global_position.x
-	camera.limit_top = upper_limit.global_position.y
-	camera.limit_bottom = downer_limit.global_position.y
-	camera.limit_right = downer_limit.global_position.x
+#func get_limit():
+#	var upper_limit: Position2D = actual_level.get_node("Limits/limit_upper_left")
+#	var downer_limit: Position2D = actual_level.get_node("Limits/limit_downer_right")
+#	camera.limit_left = upper_limit.global_position.x
+#	camera.limit_top = upper_limit.global_position.y
+#	camera.limit_bottom = downer_limit.global_position.y
+#	camera.limit_right = downer_limit.global_position.x
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "death":
