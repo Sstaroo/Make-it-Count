@@ -958,7 +958,7 @@ margin_right = 795.0
 margin_bottom = 228.0
 theme = SubResource( 29 )
 text = "Shoot a Low Attack
-with F"
+with c"
 align = 1
 valign = 1
 
@@ -969,7 +969,7 @@ margin_right = 1149.0
 margin_bottom = 183.0
 theme = SubResource( 29 )
 text = "Shoot a High Attack
-with D"
+with x"
 align = 1
 valign = 1
 
@@ -980,7 +980,7 @@ margin_right = 1423.0
 margin_bottom = 124.0
 theme = SubResource( 29 )
 text = "Shoot a Normal Attack
-with G"
+with z"
 align = 1
 valign = 1
 
