@@ -4,7 +4,6 @@ export(PackedScene) onready var flecha
 export(PackedScene) onready var flecha_normal
 export(PackedScene) onready var flecha_alta
 
-const death_menu = preload("res://Escena/iu/death_menu.tscn")
 
 var velocity = Vector2()
 var JUMP_SPEED = 230
@@ -17,10 +16,12 @@ onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 
+onready var death_menu = $Lifes/death_menu
 onready var heart_1 =$Lifes/Lives/heart_1
 onready var heart_2 =$Lifes/Lives/heart_2
 onready var heart_3 =$Lifes/Lives/heart_3
 onready var hearts = [heart_1, heart_2, heart_3]
+
 
 export(int) var x_high = 150
 export(int) var y_high = -100
@@ -34,11 +35,16 @@ onready var arrow_spawn = $Pivot/arrow_spawn
 onready var high_spawn = $Pivot/high_arrow_spawn
 onready var normal_spawn = $Pivot/normal_arrow_spawn
 
+onready var actual_level = get_parent()
+onready var camera = $Camera2D
+
+
 
 func _ready():
 	anim_tree.active = true
-	$Lifes/death_menu.visible = false
-	# Replace with function body.
+	death_menu.visible = false
+	get_limit()
+	
 func _physics_process(delta):
 	
 	#MOVEMENT
@@ -131,13 +137,20 @@ func _health_loss():
 
 
 func dead():
-	$Lifes/death_menu.highlight_button()
+	death_menu.highlight_button()
 
+func get_limit():
+	var upper_limit: Position2D = actual_level.get_node("Limits/limit_upper_left")
+	var downer_limit: Position2D = actual_level.get_node("Limits/limit_downer_right")
+	camera.limit_left = upper_limit.global_position.x
+	camera.limit_top = upper_limit.global_position.y
+	camera.limit_bottom = downer_limit.global_position.y
+	camera.limit_right = downer_limit.global_position.x
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "death":
 		get_tree().paused = true
-		$Lifes/death_menu.visible = true
+		death_menu.visible = true
 
 
 func _on_Area2D_body_entered(body):
@@ -147,6 +160,13 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D2_body_entered(body):
 	var direction = (global_position - body.global_position).normalized()
+	velocity = direction * SPEED * 2
+	velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
+	_health_loss()
+
+
+func _on_Enemy_Collision_area_entered(area):
+	var direction = (global_position - area.global_position).normalized()
 	velocity = direction * SPEED * 2
 	velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
 	_health_loss()

@@ -892,4 +892,5 @@ shape = SubResource( 122 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Arrow_Collision" to="." method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Enemy_Collision" to="." method="_on_Enemy_Collision_area_entered"]
 [connection signal="body_entered" from="Enemy_Collision" to="." method="_on_Area2D2_body_entered"]

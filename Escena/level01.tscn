@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/decorative_obj.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day2.png" type="Texture" id=2]
@@ -887,6 +887,9 @@ font_data = ExtResource( 10 )
 [sub_resource type="Theme" id=33]
 default_font = SubResource( 32 )
 
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 634.25, 31.75 )
+
 [node name="Level01" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -1034,3 +1037,22 @@ autoplay = true
 
 [node name="Skeleton" parent="." instance=ExtResource( 13 )]
 position = Vector2( 91, 223 )
+
+[node name="Death_Area" type="Node2D" parent="."]
+
+[node name="death_fall_1" type="Area2D" parent="Death_Area"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death_Area/death_fall_1"]
+position = Vector2( 988, 407 )
+shape = SubResource( 34 )
+
+[node name="Limits" type="Node2D" parent="."]
+
+[node name="limit_upper_left" type="Position2D" parent="Limits"]
+
+[node name="limit_downer_right" type="Position2D" parent="Limits"]
+position = Vector2( 1907, 325 )
+
+[connection signal="body_entered" from="Death_Area/death_fall_1" to="." method="_on_death_fall_1_body_entered"]
