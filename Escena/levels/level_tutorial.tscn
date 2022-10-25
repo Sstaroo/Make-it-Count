@@ -1,0 +1,184 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/mainlevbuild.png" type="Texture" id=4]
+
+[sub_resource type="TileSet" id=1]
+0/name = "bakcground_day1.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 640, 352 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "bakcground_day2.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 640, 384 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=3]
+0/name = "bakcground_day3.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 0.901961, 0.682353, 0.368627, 1 )
+0/region = Rect2( 0, 0, 640, 384 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 0, 0, 120, 0, 120, 40, 0, 40 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 40, 0, 40, 40, 0, 40, 0, 40 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 0, 0, 40, 0, 40, 40, 0, 40 )
+
+[sub_resource type="TileSet" id=7]
+0/name = "mainlevbuild.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 240, 263, 120, 40 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 4 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "mainlevbuild.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 440, 23, 40, 40 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 5 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "mainlevbuild.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 160, 263, 40, 40 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 6 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "mainlevbuild.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 200, 103, 40, 40 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[node name="level_tutorial" type="Node2D"]
+
+[node name="Limits" type="Node2D" parent="."]
+visible = false
+
+[node name="limit_upper_left" type="Position2D" parent="Limits"]
+
+[node name="limit_downer_right" type="Position2D" parent="Limits"]
+
+[node name="Death_Area" type="Node2D" parent="."]
+
+[node name="Tilemaps" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="Tilemaps"]
+
+[node name="day1" type="TileMap" parent="Tilemaps/Background"]
+tile_set = SubResource( 1 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 10, 0, 0, 20, 0, 0, 30, 0, 0, 40, 0, 0 )
+
+[node name="day2" type="TileMap" parent="Tilemaps/Background"]
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 10, 0, 0, 20, 0, 0, 30, 0, 0, 40, 0, 0 )
+
+[node name="day3" type="TileMap" parent="Tilemaps/Background"]
+tile_set = SubResource( 3 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 10, 0, 0, 20, 0, 0, 30, 0, 0, 40, 0, 0 )
+
+[node name="Floor_Roof" type="Node2D" parent="Tilemaps"]
+
+[node name="floor" type="TileMap" parent="Tilemaps/Floor_Roof"]
+tile_set = SubResource( 7 )
+cell_size = Vector2( 20, 20 )
+format = 1
+tile_data = PoolIntArray( -1, 1, 0, -65422, 1610612737, 0, 65535, -1610612736, 0, 131071, 1, 0, 65650, 1610612737, 0, 262143, 1, 0, 196722, 1610612737, 0, 393215, 1, 0, 327794, 1610612737, 0, 458751, -1610612736, 0, 393258, 0, 0, 524287, 1, 0, 458794, 1610612737, 0, 458798, 1, 0, 458866, 1610612737, 0, 655359, 1, 0, 589860, 0, 0, 589866, 1610612737, 0, 589870, 1, 0, 589938, 1610612737, 0, 786431, 1, 0, 720942, 1, 0, 720943, 536870914, 0, 720944, 0, 0, 720950, 0, 0, 720956, 0, 0, 720962, 0, 0, 720968, 0, 0, 720974, 0, 0, 720980, 0, 0, 720986, 0, 0, 720992, 0, 0, 720998, 0, 0, 721004, 0, 0, 721009, 2, 0, 786432, 536870914, 0, 786434, 536870912, 0, 786438, 0, 0, 786444, 0, 0, 786450, 0, 0, 786456, 0, 0, 786462, 0, 0, 786467, 2, 0 )
+
+[node name="Plataforms" type="Node2D" parent="Tilemaps"]
+
+[node name="Interactive_items" type="Node2D" parent="."]
