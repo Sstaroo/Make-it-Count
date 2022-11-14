@@ -1,6 +1,6 @@
 extends Area2D
 
-export(NodePath) var target_target 
+export(NodePath) var target_target
 
 var is_active = true
 onready var anim_tree = $AnimationTree

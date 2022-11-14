@@ -6,7 +6,6 @@ export(PackedScene) onready var flecha_alta
 
 
 var velocity = Vector2()
-var JUMP_SPEED = 230
 var SPEED = 200
 var GRAVITY = 10
 
@@ -30,6 +29,7 @@ export(int) var y_normal = 0
 export(int) var x_down = 250
 export(int) var y_down = 0
 export(bool) var has_arrow = true
+export(int) var JUMP_SPEED = 230
 
 onready var arrow_spawn = $Pivot/arrow_spawn
 onready var high_spawn = $Pivot/high_arrow_spawn

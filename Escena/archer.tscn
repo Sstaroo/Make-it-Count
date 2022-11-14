@@ -777,6 +777,7 @@ x_normal = 250
 y_normal = -30
 x_down = 1000
 y_down = -30
+JUMP_SPEED = 350
 
 [node name="Pivot" type="Node2D" parent="."]
 
