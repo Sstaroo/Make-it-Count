@@ -748,3 +748,6 @@ scale = Vector2( 1.5, 2 )
 position = Vector2( 3293, 105 )
 scale = Vector2( 1.2, 1.2 )
 target_target = NodePath("../column")
+
+[node name="target3" parent="Targets" instance=ExtResource( 7 )]
+position = Vector2( 5073, 239 )
