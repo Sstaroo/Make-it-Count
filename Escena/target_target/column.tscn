@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Maps/Texture/TX Tileset Ground.png" type="Texture" id=1]
+[ext_resource path="res://Escena/target_target/column.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5, 64.25 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 123, 144, 41, 144 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "active",
+"speed": 5.0
+} ]
+
+[node name="column" type="KinematicBody2D"]
+position = Vector2( 0, -10 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 10 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CollisionShape2D"]
+position = Vector2( 1, -8.5 )
+frames = SubResource( 3 )
+animation = "active"

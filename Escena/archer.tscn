@@ -773,6 +773,7 @@ script = ExtResource( 3 )
 flecha = ExtResource( 11 )
 flecha_normal = ExtResource( 11 )
 flecha_alta = ExtResource( 11 )
+y_high = -300
 x_normal = 250
 y_normal = -30
 x_down = 1000
