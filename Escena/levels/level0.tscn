@@ -755,4 +755,4 @@ scale = Vector2( 1.2, 1.2 )
 target_target = NodePath("../column")
 
 [node name="target3" parent="Targets" instance=ExtResource( 7 )]
-position = Vector2( 4990, 243 )
+position = Vector2( 4988, 241 )
