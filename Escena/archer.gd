@@ -138,6 +138,12 @@ func _health_loss():
 
 func dead():
 	death_menu.highlight_button()
+	
+func arrow_fall():
+	heart_3.value = 0
+	heart_2.value = 0
+	heart_1.value = 0
+
 
 func get_limit():
 	var upper_limit: Position2D = actual_level.get_node("Limits/limit_upper_left")

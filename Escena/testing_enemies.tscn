@@ -46,3 +46,10 @@ __meta__ = {
 
 [node name="Skeleton" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 153 )
+
+[node name="Limits" type="Node2D" parent="."]
+
+[node name="limit_upper_left" type="Position2D" parent="Limits"]
+
+[node name="limit_downer_right" type="Position2D" parent="Limits"]
+position = Vector2( 1050, 533 )

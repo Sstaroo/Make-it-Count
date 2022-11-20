@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 var SPEED = 400
 export(int) var GRAVITY_factor = 2
 export(int) var GRAVITY = 100
@@ -12,7 +13,6 @@ func _physics_process(delta):
 	if staystill:
 		return
 	rotation = velocity.angle()
-	print(is_on_floor())
 	if velocity.y > 0:
 		velocity.y += GRAVITY*delta*GRAVITY_factor
 	else:
@@ -24,7 +24,6 @@ func _physics_process(delta):
 			staystill = true
 		velocity.x *= -1*arrow_bounce
 	if is_on_floor():
-		print(velocity.y)
 		if arrow_bounce < 0.001 or (velocity.y>0 and velocity.y<50):
 			staystill = true
 		velocity.y *= -1*arrow_bounce

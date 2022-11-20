@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Assets/Maps/Texture/TX Tileset Ground.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day3.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Escena/target_target/muro.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Escena/target.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Escena/target_target/column.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escena/levels/level00.gd" type="Script" id=9]
+[ext_resource path="res://Escena/flecha_alta.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -617,7 +619,12 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 
-[node name="Level0" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 207.5, 26.75 )
+
+[node name="Level00" type="Node2D"]
+script = ExtResource( 9 )
+flecha_alta = ExtResource( 10 )
 
 [node name="Limits" type="Node2D" parent="."]
 
@@ -756,3 +763,19 @@ target_target = NodePath("../column")
 
 [node name="target3" parent="Targets" instance=ExtResource( 7 )]
 position = Vector2( 4988, 241 )
+
+[node name="Death_Area" type="Node2D" parent="."]
+
+[node name="death_fall" type="Area2D" parent="Death_Area"]
+position = Vector2( 4911, 453 )
+collision_layer = 0
+collision_mask = 10
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death_Area/death_fall"]
+position = Vector2( -3, 10 )
+shape = SubResource( 64 )
+
+[connection signal="body_entered" from="Death_Area/death_fall" to="." method="_on_death_fall_body_entered"]
