@@ -144,7 +144,6 @@ points = PoolVector2Array( 0, 0, 0, 0, 40, 0, 40, 40, 0, 40 )
 [node name="level_tutorial" type="Node2D"]
 
 [node name="Limits" type="Node2D" parent="."]
-visible = false
 
 [node name="limit_upper_left" type="Position2D" parent="Limits"]
 

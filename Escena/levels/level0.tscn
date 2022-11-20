@@ -619,6 +619,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Level0" type="Node2D"]
 
+[node name="Limits" type="Node2D" parent="."]
+
+[node name="limit_upper_left" type="Position2D" parent="Limits"]
+position = Vector2( -31, 0 )
+
+[node name="limit_downer_right" type="Position2D" parent="Limits"]
+position = Vector2( 5247, 413 )
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -697,7 +705,7 @@ text = "Jump"
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
-motion_mirroring = Vector2( 640, 0 )
+motion_mirroring = Vector2( 640, 368 )
 
 [node name="BakcgroundDay1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 3 )
@@ -705,7 +713,7 @@ centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.6, 1 )
-motion_mirroring = Vector2( 640, 0 )
+motion_mirroring = Vector2( 640, 368 )
 
 [node name="BakcgroundDay2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 texture = ExtResource( 5 )
@@ -713,7 +721,7 @@ centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.9, 1 )
-motion_mirroring = Vector2( 640, 0 )
+motion_mirroring = Vector2( 640, 368 )
 
 [node name="BakcgroundDay3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 texture = ExtResource( 2 )
@@ -721,9 +729,6 @@ centered = false
 
 [node name="Archer" parent="." instance=ExtResource( 4 )]
 position = Vector2( 114, 152 )
-__meta__ = {
-"_edit_group_": true
-}
 x_high = 90
 y_high = -170
 JUMP_SPEED = 340
@@ -731,7 +736,7 @@ JUMP_SPEED = 340
 [node name="Targets" type="Node2D" parent="."]
 
 [node name="Wall" parent="Targets" instance=ExtResource( 6 )]
-position = Vector2( 2832, 78 )
+position = Vector2( 2831, 87 )
 scale = Vector2( 1, 3 )
 
 [node name="target" parent="Targets" instance=ExtResource( 7 )]
