@@ -166,13 +166,15 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D2_body_entered(body):
 	var direction = (global_position - body.global_position).normalized()
-	velocity = direction * SPEED * 2
-	velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
-	_health_loss()
+	if heart_1.value > 0:
+		velocity = direction * SPEED * 2
+		velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
+		_health_loss()
 
 
 func _on_Enemy_Collision_area_entered(area):
 	var direction = (global_position - area.global_position).normalized()
-	velocity = direction * SPEED * 2
-	velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
-	_health_loss()
+	if heart_1.value > 0:
+		velocity = direction * SPEED * 2
+		velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
+		_health_loss()
