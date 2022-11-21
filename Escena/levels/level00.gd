@@ -18,10 +18,3 @@ func _on_death_fall_body_entered(body):
 
 
 
-func _on_Area2D_body_entered(body):
-	$jump_dialo/jump_timer.start(1)
-	
-
-
-func _on_jump_timer_timeout():
-	pass # Replace with function body.
