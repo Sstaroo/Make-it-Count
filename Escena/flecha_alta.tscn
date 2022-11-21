@@ -10,7 +10,7 @@ extents = Vector2( 8.5, 1 )
 radius = 1.0
 height = 0.0
 
-[node name="flecha_alta" type="KinematicBody2D"]
+[node name="flecha_alta" type="KinematicBody2D" groups=["arrow"]]
 collision_layer = 8
 script = ExtResource( 2 )
 GRAVITY_factor = 4

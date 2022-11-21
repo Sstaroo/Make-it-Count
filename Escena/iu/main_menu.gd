@@ -25,4 +25,4 @@ func _on_exit_pressed():
 	get_tree().quit()
 	
 func _on_tutorial_pressed():
-	get_tree().change_scene("res://Escena/tutorial.tscn")
+	get_tree().change_scene("res://Escena/levels/level0.tscn")

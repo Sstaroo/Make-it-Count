@@ -766,7 +766,7 @@ extents = Vector2( 9, 19 )
 radius = 4.0
 height = 16.0
 
-[node name="Archer" type="KinematicBody2D"]
+[node name="Archer" type="KinematicBody2D" groups=["Player"]]
 z_index = 1
 collision_layer = 2
 script = ExtResource( 3 )
