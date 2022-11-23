@@ -16,10 +16,13 @@ onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
 
 onready var death_menu = $Lifes/death_menu
+onready var death_tutorial = $Lifes/tutorial_death
 onready var heart_1 =$Lifes/Lives/heart_1
 onready var heart_2 =$Lifes/Lives/heart_2
 onready var heart_3 =$Lifes/Lives/heart_3
 onready var hearts = [heart_1, heart_2, heart_3]
+onready var tutorial 
+
 
 
 export(int) var x_high = 150
@@ -43,6 +46,8 @@ onready var camera = $Camera2D
 func _ready():
 	anim_tree.active = true
 	death_menu.visible = false
+	death_tutorial.visible = false
+	tutorial = false
 	get_limit()
 	
 func _physics_process(delta):
@@ -144,6 +149,13 @@ func arrow_fall():
 	heart_2.value = 0
 	heart_1.value = 0
 
+func arrow_fall_on_tutorial():
+	tutorial = true
+	heart_3.value = 0
+	heart_2.value = 0
+	heart_1.value = 0
+
+
 
 func get_limit():
 	var upper_limit: Position2D = actual_level.get_node("Limits/limit_upper_left")
@@ -153,10 +165,19 @@ func get_limit():
 	camera.limit_bottom = downer_limit.global_position.y
 	camera.limit_right = downer_limit.global_position.x
 
+func _death_menu_visible():
+	if tutorial == true:
+		death_tutorial.visible = true
+		death_tutorial.highlight_button()
+	else:
+		death_menu.highlight_button()
+		death_menu.visible = true
+		
+
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "death":
 		get_tree().paused = true
-		death_menu.visible = true
+		_death_menu_visible()
 
 
 func _on_Area2D_body_entered(body):

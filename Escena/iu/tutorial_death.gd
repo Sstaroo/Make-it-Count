@@ -2,11 +2,15 @@ extends CenterContainer
 
 
 onready var restart = $VBoxContainer/Restart
-onready var main_menu= $VBoxContainer/MainMenu
+onready var main_menu = $VBoxContainer/Main_menu
+onready var exit = $VBoxContainer/Exit
+onready var but = $VBoxContainer/but
 
 func _ready():
 	restart.connect("pressed",self,"_on_restart_pressed")
 	main_menu.connect("pressed",self,"_on_main_menu_pressed")
+	exit.connect("pressed",self,"_on_Exit_pressed")
+	but.connect("pressed",self,"_on_main_menu_pressed")
 	
 	hide()
 

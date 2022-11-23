@@ -14,7 +14,7 @@ func no_arrow():
 	archer.has_arrow = false
 
 func _on_death_fall_body_entered(body):
-	archer.arrow_fall()
+	archer.arrow_fall_on_tutorial()
 
 
 
