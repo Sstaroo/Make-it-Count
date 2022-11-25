@@ -19,7 +19,6 @@ func _ready() -> void:
 func _physics_process(delta):
 	if has_archer:
 		particles.emitting = false
-		
 	if staystill:
 		return
 	rotation = velocity.angle()

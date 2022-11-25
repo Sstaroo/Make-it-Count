@@ -827,12 +827,12 @@ scale = Vector2( 1.2, 1.2 )
 target_target = NodePath("../Wall")
 
 [node name="column" parent="Targets" instance=ExtResource( 8 )]
-position = Vector2( 3359, 136 )
+position = Vector2( 3264, 141 )
 rotation = -3.14159
 scale = Vector2( 1.5, 2 )
 
 [node name="target2" parent="Targets" instance=ExtResource( 7 )]
-position = Vector2( 3166, 114 )
+position = Vector2( 3144, 110 )
 scale = Vector2( 1.2, 1.2 )
 target_target = NodePath("../column")
 
@@ -866,6 +866,7 @@ position = Vector2( 2124, 256 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="dialogues" type="Node2D" parent="."]
+visible = false
 
 [node name="jump" parent="dialogues" instance=ExtResource( 12 )]
 position = Vector2( 561, 161 )

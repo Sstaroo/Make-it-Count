@@ -5,6 +5,7 @@ onready var restart = $VBoxContainer/Restart
 onready var main_menu = $VBoxContainer/Main_menu
 onready var exit = $VBoxContainer/Exit
 onready var but = $VBoxContainer/but
+onready var anim_play = $Panel/AnimationPlayer
 
 func _ready():
 	restart.connect("pressed",self,"_on_restart_pressed")
@@ -13,6 +14,8 @@ func _ready():
 	but.connect("pressed",self,"_on_main_menu_pressed")
 	
 	hide()
+	anim_play.play("shadowing")
+	
 
 func highlight_button():
 	visible = true
