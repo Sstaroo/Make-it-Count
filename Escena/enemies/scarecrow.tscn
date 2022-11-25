@@ -137,7 +137,7 @@ collision_mask = 10
 shape = SubResource( 8 )
 
 [node name="pivote" type="Node2D" parent="."]
-rotation = -0.0698132
+rotation = -0.20944
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="pivote"]
 position = Vector2( -2.00251, -33.941 )
@@ -147,8 +147,7 @@ animation = "idle"
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 4.27358, -43.0783 )
 rotation = -0.0199295
-emitting = false
-amount = 17
+amount = 51
 process_material = SubResource( 3 )
 texture = ExtResource( 1 )
 

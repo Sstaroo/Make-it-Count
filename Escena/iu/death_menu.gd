@@ -16,7 +16,7 @@ func highlight_button():
 	get_tree().paused = true
 	
 func _on_restart_pressed():
-	get_tree().change_scene("res://Escena/level01.tscn")
+	get_tree().change_scene("res://Escena/levels/level0.tscn")
 	get_tree().paused = false
 	
 func _on_main_menu_pressed():

@@ -149,11 +149,6 @@ func arrow_fall():
 	heart_2.value = 0
 	heart_1.value = 0
 
-func arrow_fall_on_tutorial():
-	tutorial = true
-	heart_3.value = 0
-	heart_2.value = 0
-	heart_1.value = 0
 
 
 
@@ -167,9 +162,11 @@ func get_limit():
 
 func _death_menu_visible():
 	if tutorial == true:
+		print("1")
 		death_tutorial.visible = true
 		death_tutorial.highlight_button()
 	else:
+		print("2")
 		death_menu.highlight_button()
 		death_menu.visible = true
 		
@@ -181,8 +178,10 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func _on_Area2D_body_entered(body):
-	has_arrow = true
-	body.queue_free() 
+	if body.is_in_group("arrow"):
+		has_arrow = true
+		body.not_tutorial()
+		body.queue_free() 
 
 
 func _on_Area2D2_body_entered(body):

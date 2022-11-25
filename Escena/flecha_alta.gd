@@ -3,13 +3,23 @@ extends KinematicBody2D
 var SPEED = 400
 export(int) var GRAVITY_factor = 2
 export(int) var GRAVITY = 100
+
 var velocity = Vector2(200, 0)
 var arrow_bounce : float
 var staystill = false
 
+onready var particles = $CollisionShape2D/Sprite/Particles2D
+
+onready var has_archer
+
 func _ready() -> void:
-	pass
+	has_archer = false
+	particles.emitting = true
+	
 func _physics_process(delta):
+	if has_archer:
+		particles.emitting = false
+		
 	if staystill:
 		return
 	rotation = velocity.angle()
@@ -33,6 +43,9 @@ func _physics_process(delta):
 		velocity.y *= -1*arrow_bounce
 		
 
+func not_tutorial():
+	has_archer = true
+	particles.emitting = false
 
 func init(new_velocity : Vector2, new_bounce : float) -> void:
 	velocity = new_velocity

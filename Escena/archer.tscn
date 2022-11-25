@@ -369,7 +369,7 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "dead"
+"method": "_death_menu_visible"
 } ]
 }
 
@@ -787,7 +787,6 @@ JUMP_SPEED = 350
 position = Vector2( 0, -3 )
 frames = SubResource( 27 )
 animation = "death"
-frame = 9
 
 [node name="arrow_spawn" type="Position2D" parent="Pivot"]
 position = Vector2( 19, -2 )
