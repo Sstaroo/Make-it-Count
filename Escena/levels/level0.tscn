@@ -866,7 +866,6 @@ position = Vector2( 2124, 256 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="dialogues" type="Node2D" parent="."]
-visible = false
 
 [node name="jump" parent="dialogues" instance=ExtResource( 12 )]
 position = Vector2( 561, 161 )
