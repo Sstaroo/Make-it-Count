@@ -11,6 +11,7 @@
 [ext_resource path="res://Escena/presentacion.gd" type="Script" id=9]
 [ext_resource path="res://Escena/bee.tscn" type="PackedScene" id=10]
 
+
 [sub_resource type="DynamicFont" id=1]
 size = 32
 outline_size = 1

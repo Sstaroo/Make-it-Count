@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/Maps/PFantasy_SET1_v1.0/bakcground_day3.png" type="Texture" id=8]
 [ext_resource path="res://Escena/presenta/idea.gd" type="Script" id=9]
 
+
 [sub_resource type="DynamicFont" id=11]
 size = 32
 outline_size = 1

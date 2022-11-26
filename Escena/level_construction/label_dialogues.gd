@@ -13,7 +13,7 @@ func _ready():
 
 
 
-func _on_label_dialogues_body_entered(body):
+func _on_label_dialogues_body_entered(_body):
 	$Timer.start()
 
 

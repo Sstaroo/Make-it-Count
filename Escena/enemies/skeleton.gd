@@ -32,7 +32,7 @@ func dead():
 	timer.start()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_attack:
 		return
 	if not is_dead:
@@ -63,7 +63,7 @@ func attack():
 	can_attack = false
 	$time_to_attack.start()
 	
-func take_damage(dmg):
+func take_damage(_dmg):
 	health -= 1
 	if health <= 0:
 		dead()
@@ -75,16 +75,16 @@ func _on_Timer_timeout():
 func _on_ArcherDetectionArea_body_entered(body):
 	if body != self:
 		archer = body
-		pass # Replace with function body.
 
 
-func _on_ArcherDetectionArea_body_exited(body):
+
+func _on_ArcherDetectionArea_body_exited(_body):
 	archer = null
-	pass # Replace with function body.
+
 
 
 func _on_time_to_attack_timeout():
-	can_attack = true # Replace with function body.
+	can_attack = true
 
 
 func _on_AnimatedSprite_animation_finished():

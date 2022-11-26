@@ -50,7 +50,7 @@ func _ready():
 	tutorial = false
 	get_limit()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	#MOVEMENT
 	var move_input = Input.get_axis("move_left","move_right")
@@ -186,7 +186,7 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D2_body_entered(body):
 	var direction = (global_position - body.global_position).normalized()
-	if heart_1.value > 0:
+	if heart_1.value > 0 and not body.is_dead:
 		velocity = direction * SPEED * 2
 		velocity.y = clamp(velocity.y, -JUMP_SPEED, JUMP_SPEED)
 		_health_loss()

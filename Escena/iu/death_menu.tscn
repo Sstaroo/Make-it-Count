@@ -1,8 +1,38 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Fonts/magofonts/mago1.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Escena/iu/death_menu.gd" type="Script" id=2]
 [ext_resource path="res://resources/theme.tres" type="Theme" id=3]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends CenterContainer
+
+
+onready var restart = $VBoxContainer/Restart
+onready var main_menu= $VBoxContainer/MainMenu
+
+func _ready():
+	restart.connect(\"pressed\",self,\"_on_restart_pressed\")
+	main_menu.connect(\"pressed\",self,\"_on_main_menu_pressed\")
+	
+	hide()
+
+func highlight_button():
+	visible = true
+	restart.grab_focus()
+	get_tree().paused = true
+	
+func _on_restart_pressed():
+	get_tree().change_scene(\"res://Escena/levels/level0.tscn\")
+	get_tree().paused = false
+	
+func _on_main_menu_pressed():
+	get_tree().change_scene(\"res://Escena/iu/main_menu.tscn\")
+	get_tree().paused = false
+	
+
+func _on_Exit_pressed():
+	get_tree().quit() 
+"
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -25,7 +55,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -162, -40 )
 theme = ExtResource( 3 )
-script = ExtResource( 2 )
+script = SubResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }

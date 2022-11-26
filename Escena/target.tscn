@@ -3,6 +3,7 @@
 [ext_resource path="res://Assets/Mechanics/Targets/Target.png" type="Texture" id=1]
 [ext_resource path="res://Escena/target.gd" type="Script" id=2]
 
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.0
 height = 14.0

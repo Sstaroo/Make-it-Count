@@ -2,7 +2,9 @@ extends Node2D
 
 onready var archer = $Archer
 onready var flecha_alta_alta = $flecha_alta
+onready var end_tutorial_dialog = $dialogues/arrow_importance
 export(PackedScene) onready var flecha_alta
+
 
 
 
@@ -15,8 +17,9 @@ func _ready():
 func no_arrow():
 	archer.has_arrow = false
 
-func _on_death_fall_body_entered(body):
+func _on_death_fall_body_entered(_body):
 	archer.tutorial = true
 	archer.arrow_fall()
+	end_tutorial_dialog.queue_free()
 
 

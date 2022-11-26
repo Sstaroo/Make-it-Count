@@ -3,6 +3,7 @@
 [ext_resource path="res://Assets/Maps/Texture/TX Tileset Ground Darken.png" type="Texture" id=1]
 [ext_resource path="res://Escena/target_target/muro.gd" type="Script" id=2]
 
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47.875, 47.5 )
 

@@ -3,7 +3,6 @@ onready var play = $VBoxContainer/Play
 onready var credits = $VBoxContainer/Credits
 onready var exit = $VBoxContainer/Exit
 onready var tutorial = $VBoxContainer/Tutorial
-onready var level01 = $VBoxContainer/Level01
 
 
 func _ready():
@@ -18,6 +17,7 @@ func _ready():
 
 func _on_credits_pressed():
 	print ("Escuadron Carpincho")
+	
 func _on_play_pressed():
 	get_tree().change_scene("res://Escena/levels/level0.tscn")
 
