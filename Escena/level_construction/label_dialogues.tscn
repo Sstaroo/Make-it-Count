@@ -3,7 +3,6 @@
 [ext_resource path="res://Escena/level_construction/label_dialogues.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/magofonts/mago2.ttf" type="DynamicFontData" id=2]
 
-
 [sub_resource type="DynamicFont" id=3]
 size = 32
 outline_size = 1
