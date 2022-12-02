@@ -10,7 +10,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_skeleton_spawn_body_entered(body):
-	if body.is_on_group("Player") and not autospawn:
+	if body.is_in_group("Player") and not autospawn:
 		spawner.spawn()
-	if body.is_on_group("Player") and autospawn:
+	if body.is_in_group("Player") and autospawn:
 		spawner.start(time_value)
