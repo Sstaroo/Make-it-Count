@@ -13,5 +13,4 @@ func _ready():
 
 func _on_death_fall_body_entered(_body):
 	archer.arrow_fall()
-	get_tree().paused = true
-	archer._death_menu_visible()
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Escena/levels/level01.gd" type="Script" id=1]
 [ext_resource path="res://Escena/enemies/skeleton.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Escena/target.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Escena/level_construction/tilemap/tile_map.tres" type="TileSet" id=7]
 [ext_resource path="res://Escena/archer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escena/enemies/stones.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1602.5, 25.5 )
@@ -94,5 +95,8 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death_Area/death_fall"]
 position = Vector2( 840.5, 32.5 )
 shape = SubResource( 1 )
+
+[node name="stones" parent="." instance=ExtResource( 9 )]
+position = Vector2( 148, 29 )
 
 [connection signal="body_entered" from="Death_Area/death_fall" to="." method="_on_death_fall_body_entered"]
