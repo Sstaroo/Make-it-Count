@@ -19,7 +19,7 @@ func _on_credits_pressed():
 	print ("Escuadron Carpincho")
 	
 func _on_play_pressed():
-	get_tree().change_scene("res://Escena/levels/level0.tscn")
+	get_tree().change_scene("res://Escena/levels/level01.tscn")
 
 func _on_exit_pressed():
 	get_tree().quit()

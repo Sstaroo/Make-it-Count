@@ -18,7 +18,7 @@ func state():
 
 
 func _on_target_body_entered(body):
-	if not body.is_in_group("not_target"):
+	if not body.is_in_group("not_target") and is_active:
 		var node_target = get_node(target_target)
 		if node_target:
 			node_target.execute()

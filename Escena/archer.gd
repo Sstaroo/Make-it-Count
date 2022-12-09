@@ -48,6 +48,7 @@ func _ready():
 	death_menu.visible = false
 	death_tutorial.visible = false
 	tutorial = false
+	death_menu.current_lvl = actual_level
 	get_limit()
 	
 func _physics_process(_delta):
@@ -148,8 +149,6 @@ func arrow_fall():
 	heart_3.value = 0
 	heart_2.value = 0
 	heart_1.value = 0
-
-
 
 
 func get_limit():

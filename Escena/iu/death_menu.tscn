@@ -7,8 +7,12 @@
 script/source = "extends CenterContainer
 
 
+
 onready var restart = $VBoxContainer/Restart
 onready var main_menu= $VBoxContainer/MainMenu
+onready var format_path = \"res://Escena/levels/%s.tscn\"
+onready var current_lvl
+
 
 func _ready():
 	restart.connect(\"pressed\",self,\"_on_restart_pressed\")
@@ -22,7 +26,9 @@ func highlight_button():
 	get_tree().paused = true
 	
 func _on_restart_pressed():
-	get_tree().change_scene(\"res://Escena/levels/level0.tscn\")
+	var path_string = String(current_lvl.get_path())
+	var level = path_string.get_file()
+	get_tree().change_scene(format_path % level)
 	get_tree().paused = false
 	
 func _on_main_menu_pressed():

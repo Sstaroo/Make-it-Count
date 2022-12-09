@@ -1,23 +1,21 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escena/level_construction/spawner.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Escena/level_construction/skeleton_spawn.gd" type="Script" id=2]
-[ext_resource path="res://Escena/enemies/skeleton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escena/level_construction/rocks_spawn.gd" type="Script" id=2]
+[ext_resource path="res://Escena/enemies/stones.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 55.875, 15.5 )
 
 [node name="area_spawn" type="Area2D"]
 script = ExtResource( 2 )
-skeleton = ExtResource( 3 )
-autospawn = true
-time_value = 0.5
+rocks = ExtResource( 3 )
 num_of_spawn = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="spawner" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, -230 )
+position = Vector2( 4, -250 )
 
-[connection signal="body_entered" from="." to="." method="_on_skeleton_spawn_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_area_spawn_body_entered"]

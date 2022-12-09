@@ -202,7 +202,6 @@ extents = Vector2( 174.5, 60 )
 
 [node name="Skeleton" type="KinematicBody2D"]
 collision_layer = 4
-collision_mask = 5
 script = ExtResource( 9 )
 offset_normal = Vector2( -12, -16 )
 offset_attack = Vector2( 20, -16 )

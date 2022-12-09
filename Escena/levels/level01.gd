@@ -8,9 +8,12 @@ onready var playback = anim_treelvl1.get("parameters/playback")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
-func _on_death_fall_body_entered(_body):
-	archer.arrow_fall()
+
+func _on_death_fall_body_entered(body):
+	if body.is_in_group("Player") or body.is_in_group("arrow"):
+		archer.arrow_fall()
+		archer._death_menu_visible()
 

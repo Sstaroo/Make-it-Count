@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 export(Vector2) var offset_normal
 export(Vector2) var offset_attack
 export(int) var dist_attack
@@ -22,13 +23,13 @@ onready var sword_collision = $pivot/Area2D/CollisionShape2D
 
 func _ready():
 	AnimSprite.play("walking") 
-	sword_collision.disabled = true
+	sword_collision.set_deferred("disabled", true)
 
 func dead():
 	is_dead = true
 	velocity = Vector2(0,0)
 	AnimSprite.play("dead")
-	collShape.disabled = true
+	collShape.queue_free()
 	timer.start()
 
 
@@ -73,14 +74,12 @@ func _on_Timer_timeout():
 
 
 func _on_ArcherDetectionArea_body_entered(body):
-	if body != self:
+	if body.is_in_group("Player"):
 		archer = body
-
 
 
 func _on_ArcherDetectionArea_body_exited(_body):
 	archer = null
-
 
 
 func _on_time_to_attack_timeout():

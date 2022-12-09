@@ -771,6 +771,9 @@ height = 16.0
 z_index = 1
 collision_layer = 2
 script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
 flecha = ExtResource( 3 )
 flecha_normal = ExtResource( 3 )
 flecha_alta = ExtResource( 3 )

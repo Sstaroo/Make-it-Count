@@ -7,7 +7,7 @@ onready var but = $VBoxContainer/but
 onready var anim_play = $Panel/AnimationPlayer
 
 func _ready():
-	but.connect("pressed",self,"_on_main_menu_pressed")
+	but.connect("pressed",self,"_on_but_pressed")
 	main_menu.connect("pressed",self,"_on_main_menu_pressed")
 	exit.connect("pressed",self,"_on_Exit_pressed")
 
@@ -19,6 +19,11 @@ func highlight_button():
 	visible = true
 	but.grab_focus()
 	get_tree().paused = true
+	
+
+func _on_but_pressed():
+	get_tree().change_scene("res://Escena/levels/level01.tscn")
+	get_tree().paused = false
 	
 	
 func _on_main_menu_pressed():
