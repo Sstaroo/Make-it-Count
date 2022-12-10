@@ -22,12 +22,8 @@ func _on_skeleton_spawn_body_entered(body):
 			num_of_spawn -= 1
 			
 		else:
-			print("esqueleto")
 			spawner.spawn()
 			num_of_spawn -= 1
-		
-		
-		print(num_of_spawn)
 		
 	if(num_of_spawn <= 0):
 		is_active = false

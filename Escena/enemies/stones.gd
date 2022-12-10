@@ -1,9 +1,12 @@
 extends Area2D
 
 
-export (int) var g = 65
+export (int) var g = 10
+export (int) var initial_velocity= 450
 var velocity = Vector2.ZERO
 
+func _ready():
+	velocity.y=initial_velocity
 
 func _physics_process(delta):
 	velocity.y += delta * g
