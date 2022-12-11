@@ -2,7 +2,7 @@ extends Area2D
 
 
 export (int) var g = 10
-export (int) var initial_velocity= 450
+export (int) var initial_velocity= 480
 var velocity = Vector2.ZERO
 
 func _ready():

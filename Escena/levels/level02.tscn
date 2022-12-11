@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Escena/level_construction/tilemap/tile_map.tres" type="TileSet" id=1]
+[ext_resource path="res://Escena/level_construction/movingplatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escena/archer.tscn" type="PackedScene" id=3]
+
+[node name="level02" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196608, 1, 196614, 196609, 1, 196615, 196610, 1, 196615, 196611, 1, 196615, 196612, 1, 983051, 196625, 1, 196614, 196626, 1, 196615, 196627, 1, 196615, 196628, 1, 196615, 196629, 1, 196615, 196630, 1, 196615, 196631, 1, 196615, 196632, 1, 983051, 458764, 1, 196614, 458765, 1, 196615, 458766, 1, 196615, 458767, 1, 196615, 458768, 1, 196615, 458769, 1, 196615, 458770, 1, 196615, 458771, 1, 983051 )
+
+[node name="Limits" type="Node2D" parent="."]
+
+[node name="limit_upper_left" type="Position2D" parent="Limits"]
+
+[node name="limit_downer_right" type="Position2D" parent="Limits"]
+position = Vector2( 4400, 403 )
+
+[node name="Archer" parent="." instance=ExtResource( 3 )]
+position = Vector2( 129, 78 )
+
+[node name="movingplatform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 270, 116 )
+move_to = Vector2( 15, 15 )
+speed = 150.0
