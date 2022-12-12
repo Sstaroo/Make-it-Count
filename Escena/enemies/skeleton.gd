@@ -78,8 +78,9 @@ func _on_ArcherDetectionArea_body_entered(body):
 		archer = body
 
 
-func _on_ArcherDetectionArea_body_exited(_body):
-	archer = null
+func _on_ArcherDetectionArea_body_exited(body):
+	if body.is_in_group("Player"):
+		archer = null
 
 
 func _on_time_to_attack_timeout():

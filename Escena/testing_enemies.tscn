@@ -1,9 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Maps/SET1/_PNG/SET1_Mainlev_build.png" type="Texture" id=1]
-[ext_resource path="res://Escena/enemies/skeleton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escena/enemies/death_boss.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escena/archer.tscn" type="PackedScene" id=3]
-
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 32, 0, 32 )
@@ -41,12 +40,6 @@ tile_data = PoolIntArray( 131071, -1610612736, 0, 262144, 0, 0, 262148, 0, 0, 26
 
 [node name="Archer" parent="." instance=ExtResource( 3 )]
 position = Vector2( 435, 135 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Skeleton" parent="." instance=ExtResource( 2 )]
-position = Vector2( 513, 153 )
 
 [node name="Limits" type="Node2D" parent="."]
 
@@ -54,3 +47,6 @@ position = Vector2( 513, 153 )
 
 [node name="limit_downer_right" type="Position2D" parent="Limits"]
 position = Vector2( 1050, 533 )
+
+[node name="DeathBoss" parent="." instance=ExtResource( 2 )]
+position = Vector2( 609, 161 )

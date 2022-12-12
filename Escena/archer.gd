@@ -136,10 +136,14 @@ func _disparar_normal():
 #Health
 func _health_loss():
 	var heart_affected = heart_1
+	var index
 	for heart in hearts:
 		if heart.value > 0:
 			heart_affected = heart
+			index = hearts.find(heart_affected) 
 	heart_affected.value -= 1
+	Game.player_lives[index] -= 1
+
 
 
 func dead():
