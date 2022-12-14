@@ -3,7 +3,6 @@
 [ext_resource path="res://Assets/Maps/Texture/TX Tileset Ground.png" type="Texture" id=1]
 [ext_resource path="res://Escena/target_target/column.gd" type="Script" id=2]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.5, 64.25 )
 
