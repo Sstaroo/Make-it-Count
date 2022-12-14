@@ -8,6 +8,7 @@ func _ready():
 func spawn():
 	if scene:
 		var instance = scene.instance()
+		yield(get_tree().create_timer(0.5), "timeout")
 		add_child(instance)
 		instance.global_position = global_position
 

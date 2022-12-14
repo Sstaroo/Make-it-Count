@@ -185,43 +185,45 @@ format = 1
 tile_data = PoolIntArray( 589822, 536870913, 0, 524291, 536870913, 0, 524295, 536870912, 0, 524301, 536870912, 0, 655358, 1, 0, 655359, 536870913, 0, 589828, 0, 0, 589829, 536870913, 0, 589831, 1, 0, 589837, 536870913, 0, 720895, 0, 0, 655365, 1, 0, 655372, 0, 0 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 140.0
-margin_top = 60.0
-margin_right = 260.0
-margin_bottom = 230.0
+margin_left = 136.0
+margin_top = 48.0
+margin_right = 263.0
+margin_bottom = 242.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 120.0
+margin_right = 127.0
 margin_bottom = 26.0
+theme = ExtResource( 1 )
+theme_type_variation = "SmallFont"
 custom_fonts/font = SubResource( 1 )
 text = "Make it Count"
 align = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 margin_top = 30.0
-margin_right = 120.0
-margin_bottom = 62.0
+margin_right = 127.0
+margin_bottom = 68.0
 rect_pivot_offset = Vector2( -120, -15 )
 text = "PLAY"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
-margin_top = 66.0
-margin_right = 120.0
-margin_bottom = 98.0
+margin_top = 72.0
+margin_right = 127.0
+margin_bottom = 110.0
 rect_pivot_offset = Vector2( -120, -15 )
 text = "CREDITS"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
-margin_top = 102.0
-margin_right = 120.0
-margin_bottom = 134.0
+margin_top = 114.0
+margin_right = 127.0
+margin_bottom = 152.0
 rect_pivot_offset = Vector2( -120, -15 )
 text = "EXIT"
 
 [node name="Tutorial" type="Button" parent="VBoxContainer"]
-margin_top = 138.0
-margin_right = 120.0
-margin_bottom = 170.0
+margin_top = 156.0
+margin_right = 127.0
+margin_bottom = 194.0
 text = "TUTORIAL"
 
 [node name="musicamenu" type="AudioStreamPlayer" parent="."]

@@ -153,6 +153,7 @@ func arrow_fall():
 	heart_3.value = 0
 	heart_2.value = 0
 	heart_1.value = 0
+	_death_menu_visible()
 
 
 func get_limit():
@@ -170,8 +171,9 @@ func _death_menu_visible():
 		death_tutorial.highlight_button()
 	else:
 		print("2")
-		death_menu.highlight_button()
 		death_menu.visible = true
+		death_menu.highlight_button()
+		
 		
 
 func _on_AnimationPlayer_animation_finished(anim_name):

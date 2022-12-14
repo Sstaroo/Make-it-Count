@@ -28,6 +28,6 @@ func _init_tween() -> void:
 	
 	tween.start()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	platform.position = follow	
 	
