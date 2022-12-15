@@ -16,7 +16,7 @@ func _ready():
 
 
 func _on_credits_pressed():
-	print ("Escuadron Carpincho")
+	get_tree().change_scene("res://Escena/iu/credits.tscn")
 	
 func _on_play_pressed():
 	get_tree().change_scene("res://Escena/levels/level01.tscn")

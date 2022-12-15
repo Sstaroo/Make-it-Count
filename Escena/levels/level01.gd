@@ -6,6 +6,7 @@ onready var anim_playerlvl1 = archer.anim_player
 onready var anim_treelvl1 = archer.anim_tree
 onready var playback = anim_treelvl1.get("parameters/playback")
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
