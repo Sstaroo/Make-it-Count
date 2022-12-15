@@ -448,7 +448,7 @@ position = Vector2( 2, -31.5 )
 scale = Vector2( 1, 0.99375 )
 frames = SubResource( 62 )
 animation = "walk"
-frame = 11
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pivot"]
 root_node = NodePath("../..")
@@ -465,4 +465,3 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Area2D"]
 shape = SubResource( 68 )
-disabled = true
