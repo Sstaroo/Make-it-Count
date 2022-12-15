@@ -1,0 +1,465 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://Assets/Enemies/Demon/demon_slime_FREE_v1.0_288x160_spritesheet.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40.5, 46.5 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 480, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 480, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 480, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 864, 480, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 1152, 480, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 864, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 1152, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 1440, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 1728, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 2016, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 2304, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 2592, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 2880, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 3168, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 3456, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 3744, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 4032, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 4320, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 4608, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
+region = Rect2( 4896, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
+region = Rect2( 5184, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
+region = Rect2( 5472, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 1 )
+region = Rect2( 5760, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 6048, 640, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 0, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 0, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 1 )
+region = Rect2( 864, 0, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 1 )
+region = Rect2( 1152, 0, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 1 )
+region = Rect2( 1440, 0, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 1 )
+region = Rect2( 864, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 1 )
+region = Rect2( 1152, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 1 )
+region = Rect2( 1440, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 1 )
+region = Rect2( 1728, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 1 )
+region = Rect2( 2016, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 1 )
+region = Rect2( 2304, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 1 )
+region = Rect2( 2592, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 1 )
+region = Rect2( 2880, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 1 )
+region = Rect2( 3168, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 1 )
+region = Rect2( 3456, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 1 )
+region = Rect2( 3744, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 1 )
+region = Rect2( 4032, 320, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 1 )
+region = Rect2( 864, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 1 )
+region = Rect2( 1152, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 1 )
+region = Rect2( 1440, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 1 )
+region = Rect2( 1728, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 1 )
+region = Rect2( 2016, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 1 )
+region = Rect2( 2304, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 1 )
+region = Rect2( 2592, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 1 )
+region = Rect2( 2880, 160, 288, 160 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 1 )
+region = Rect2( 3168, 160, 288, 160 )
+
+[sub_resource type="SpriteFrames" id=62]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "damage_taken",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
+"loop": true,
+"name": "sword_attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=63]
+resource_name = "damage_taken"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "damage_taken" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=64]
+resource_name = "death"
+length = 2.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "death" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]
+}
+
+[sub_resource type="Animation" id=65]
+resource_name = "idle"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "sword_attack"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "sword_attack" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pivot/Area2D/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=67]
+resource_name = "walk"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pivot/AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pivot/AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="CircleShape2D" id=68]
+radius = 30.0666
+
+[node name="BossDemon" type="KinematicBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.5, 1.5 )
+shape = SubResource( 1 )
+
+[node name="Pivot" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Pivot"]
+position = Vector2( 2, -31 )
+frames = SubResource( 62 )
+animation = "sword_attack"
+frame = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pivot"]
+root_node = NodePath("../..")
+anims/damage_taken = SubResource( 63 )
+anims/death = SubResource( 64 )
+anims/idle = SubResource( 65 )
+anims/sword_attack = SubResource( 66 )
+anims/walk = SubResource( 67 )
+
+[node name="Area2D" type="Area2D" parent="Pivot"]
+position = Vector2( -79, 25 )
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Area2D"]
+shape = SubResource( 68 )
+disabled = true
