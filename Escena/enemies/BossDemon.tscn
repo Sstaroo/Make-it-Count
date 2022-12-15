@@ -1,9 +1,10 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Assets/Enemies/Demon/demon_slime_FREE_v1.0_288x160_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://Escena/enemies/bossdemon.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 40.5, 46.5 )
+extents = Vector2( 32, 36 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -434,17 +435,19 @@ tracks/1/keys = {
 radius = 30.0666
 
 [node name="BossDemon" type="KinematicBody2D"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.5, 1.5 )
+position = Vector2( 0, 11 )
 shape = SubResource( 1 )
 
 [node name="Pivot" type="Node2D" parent="."]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pivot"]
-position = Vector2( 2, -31 )
+position = Vector2( 2, -31.5 )
+scale = Vector2( 1, 0.99375 )
 frames = SubResource( 62 )
-animation = "sword_attack"
+animation = "walk"
 frame = 11
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pivot"]
