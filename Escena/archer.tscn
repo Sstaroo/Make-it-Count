@@ -747,7 +747,7 @@ states/run/position = Vector2( 70, 185 )
 transitions = [ "idle", "run", SubResource( 33 ), "run", "idle", SubResource( 34 ), "idle", "jump_start", SubResource( 51 ), "jump_fall", "idle", SubResource( 52 ), "jump_start", "jump_fall", SubResource( 53 ), "idle", "jump_fall", SubResource( 54 ), "run", "jump_start", SubResource( 55 ), "jump_fall", "run", SubResource( 56 ), "run", "jump_fall", SubResource( 57 ), "run", "death", SubResource( 71 ), "idle", "death", SubResource( 72 ), "jump_start", "death", SubResource( 73 ), "jump_fall", "death", SubResource( 74 ), "idle", "low_attack", SubResource( 76 ), "low_attack", "idle", SubResource( 77 ), "low_attack", "run", SubResource( 78 ), "low_attack", "jump_start", SubResource( 79 ), "idle", "high_attack", SubResource( 108 ), "high_attack", "idle", SubResource( 109 ), "high_attack", "run", SubResource( 110 ), "high_attack", "jump_start", SubResource( 111 ), "high_attack", "death", SubResource( 112 ), "low_attack", "death", SubResource( 113 ), "normal_attack", "death", SubResource( 114 ), "normal_attack", "idle", SubResource( 115 ), "normal_attack", "run", SubResource( 116 ), "normal_attack", "jump_start", SubResource( 117 ), "idle", "normal_attack", SubResource( 118 ) ]
 start_node = "idle"
 end_node = "death"
-graph_offset = Vector2( -460.949, -22.6785 )
+graph_offset = Vector2( -526.949, -108.678 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=36]
 
@@ -770,6 +770,7 @@ height = 16.0
 [node name="Archer" type="KinematicBody2D" groups=["Player"]]
 z_index = 1
 collision_layer = 2
+collision_mask = 5
 script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
@@ -789,7 +790,7 @@ JUMP_SPEED = 350
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Pivot"]
 position = Vector2( 0, -3 )
 frames = SubResource( 27 )
-animation = "death"
+animation = "normal_attack"
 
 [node name="arrow_spawn" type="Position2D" parent="Pivot"]
 position = Vector2( 19, -2 )

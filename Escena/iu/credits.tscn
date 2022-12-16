@@ -31,7 +31,7 @@ custom_styles/bg = SubResource( 1 )
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_left = 10.0
 margin_right = 389.0
-margin_bottom = 528.0
+margin_bottom = 590.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 alignment = 1
@@ -146,10 +146,34 @@ margin_top = 284.0
 margin_right = 379.0
 margin_bottom = 288.0
 
-[node name="DeathBoss" type="Label" parent="ScrollContainer/VBoxContainer"]
+[node name="DemonSlime" type="Label" parent="ScrollContainer/VBoxContainer"]
 margin_top = 292.0
 margin_right = 379.0
 margin_bottom = 315.0
+theme = ExtResource( 2 )
+theme_type_variation = "SmallFont"
+text = "Boss Demon Slime:"
+align = 1
+uppercase = true
+
+[node name="DemonSlimeLink" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 319.0
+margin_right = 379.0
+margin_bottom = 342.0
+theme = ExtResource( 2 )
+theme_type_variation = "SmallFont"
+text = "chierit.itch.io"
+align = 1
+
+[node name="HSeparator9" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+margin_top = 346.0
+margin_right = 379.0
+margin_bottom = 350.0
+
+[node name="DeathBoss" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_top = 354.0
+margin_right = 379.0
+margin_bottom = 377.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "Undead Executioner:"
@@ -157,23 +181,23 @@ align = 1
 uppercase = true
 
 [node name="DeathBossLink" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 319.0
+margin_top = 381.0
 margin_right = 379.0
-margin_bottom = 342.0
+margin_bottom = 404.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "darkpixel-kronovi.itch.io"
 align = 1
 
 [node name="HSeparator6" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
-margin_top = 346.0
+margin_top = 408.0
 margin_right = 379.0
-margin_bottom = 350.0
+margin_bottom = 412.0
 
 [node name="Level2Decoration" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 354.0
+margin_top = 416.0
 margin_right = 379.0
-margin_bottom = 377.0
+margin_bottom = 439.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "The Pale Moonlight tileset:"
@@ -181,23 +205,23 @@ align = 1
 uppercase = true
 
 [node name="Level2DecorationLink" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 381.0
+margin_top = 443.0
 margin_right = 379.0
-margin_bottom = 404.0
+margin_bottom = 466.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "corwin-zx.itch.io"
 align = 1
 
 [node name="HSeparator7" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
-margin_top = 408.0
+margin_top = 470.0
 margin_right = 379.0
-margin_bottom = 412.0
+margin_bottom = 474.0
 
 [node name="EscuadronCarpincho" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 416.0
+margin_top = 478.0
 margin_right = 379.0
-margin_bottom = 439.0
+margin_bottom = 501.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "Escuadron Carpincho:"
@@ -205,23 +229,23 @@ align = 1
 uppercase = true
 
 [node name="EscuadronCarpinchoLink" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 443.0
+margin_top = 505.0
 margin_right = 379.0
-margin_bottom = 466.0
+margin_bottom = 528.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "sstaro.itch.io"
 align = 1
 
 [node name="HSeparator8" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
-margin_top = 470.0
+margin_top = 532.0
 margin_right = 379.0
-margin_bottom = 474.0
+margin_bottom = 536.0
 
 [node name="Thanks" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 478.0
+margin_top = 540.0
 margin_right = 379.0
-margin_bottom = 501.0
+margin_bottom = 563.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 text = "Thanks for Playing! Hope you enjoyed."
@@ -229,9 +253,9 @@ align = 1
 uppercase = true
 
 [node name="BlankSpace" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_top = 505.0
+margin_top = 567.0
 margin_right = 379.0
-margin_bottom = 528.0
+margin_bottom = 590.0
 theme = ExtResource( 2 )
 theme_type_variation = "SmallFont"
 align = 1
