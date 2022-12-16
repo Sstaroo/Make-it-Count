@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Fonts/magofonts/mago1.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://resources/theme.tres" type="Theme" id=2]
-[ext_resource path="res://Escena/iu/tutorial_death.gd" type="Script" id=3]
+[ext_resource path="res://Escena/iu/congrats1.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=3]
 resource_name = "shadowing"
@@ -17,7 +17,21 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0.290196 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0.290196 ), Color( 0.0352941, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "credits"
+} ]
 }
 
 [sub_resource type="DynamicFont" id=1]
@@ -29,7 +43,7 @@ font_data = ExtResource( 1 )
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
 
-[node name="tutorial_death" type="CenterContainer"]
+[node name="congrats1" type="CenterContainer"]
 pause_mode = 2
 margin_left = -2.0
 margin_top = 1.0
@@ -41,7 +55,7 @@ script = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
 pause_mode = 2
-modulate = Color( 1, 1, 1, 0.290196 )
+modulate = Color( 0.0745098, 0.0745098, 0.0745098, 0.909804 )
 self_modulate = Color( 1, 1, 1, 0.513726 )
 margin_right = 400.0
 margin_bottom = 290.0
@@ -52,38 +66,17 @@ pause_mode = 2
 anims/shadowing = SubResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 104.0
-margin_top = 25.0
-margin_right = 295.0
-margin_bottom = 264.0
-rect_min_size = Vector2( 191, 159 )
+margin_top = 60.0
+margin_right = 400.0
+margin_bottom = 230.0
+rect_min_size = Vector2( 400, 170 )
 
 [node name="well" type="Label" parent="VBoxContainer"]
 pause_mode = 2
-margin_right = 191.0
-margin_bottom = 113.0
+margin_right = 400.0
+margin_bottom = 142.0
 theme = SubResource( 2 )
-text = "Well done, you passed the tutorial, but you also died u.u"
+theme_type_variation = "SmallFont"
+text = "You have defeated the first harbingers of death, but dark forces are near to come. It's time to train. You have won a battle yet not the war!"
 align = 1
 autowrap = true
-
-[node name="but" type="Button" parent="VBoxContainer"]
-margin_top = 117.0
-margin_right = 191.0
-margin_bottom = 155.0
-theme = ExtResource( 2 )
-text = "but you...."
-
-[node name="Main_menu" type="Button" parent="VBoxContainer"]
-margin_top = 159.0
-margin_right = 191.0
-margin_bottom = 197.0
-theme = ExtResource( 2 )
-text = "Main Menu"
-
-[node name="Exit" type="Button" parent="VBoxContainer"]
-margin_top = 201.0
-margin_right = 191.0
-margin_bottom = 239.0
-theme = ExtResource( 2 )
-text = "Exit"

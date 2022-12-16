@@ -155,6 +155,8 @@ font_data = ExtResource( 2 )
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.0
+margin_right = -1.0
 theme = ExtResource( 1 )
 script = ExtResource( 3 )
 
