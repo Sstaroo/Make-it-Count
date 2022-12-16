@@ -22,6 +22,7 @@ onready var heart_2 =$Lifes/Lives/heart_2
 onready var heart_3 =$Lifes/Lives/heart_3
 onready var hearts = [heart_1, heart_2, heart_3]
 onready var tutorial 
+onready var congrats_1 = $Lifes/congrats1
 
 
 
@@ -49,6 +50,7 @@ func _ready():
 	death_tutorial.visible = false
 	tutorial = false
 	death_menu.current_lvl = actual_level
+	congrats_1.visible = false
 	get_limit()
 	
 func _physics_process(_delta):
@@ -166,11 +168,9 @@ func get_limit():
 
 func _death_menu_visible():
 	if tutorial == true:
-		print("1")
 		death_tutorial.visible = true
 		death_tutorial.highlight_button()
 	else:
-		print("2")
 		death_menu.visible = true
 		death_menu.highlight_button()
 		

@@ -15,7 +15,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("next_level"):
-		get_tree().change_scene("res://Escena/levels/level02.tscn")
+		get_tree().change_scene("res://Escena/levels/boss01.tscn")
 
 
 func _on_death_fall_body_entered(body):

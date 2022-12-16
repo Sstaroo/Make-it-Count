@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
-export(int) var max_hp
+export(int) var max_hp = 30
 export(int) var normal_speed = 50
 export(int) var berserk_speed = 100
 export(bool) var is_attacking = false
+export(bool) var is_dead = false
 
 var current_health
-var is_dead = false
 var can_attack = true
 var can_be_damaged = true
 var dist_attack = 100
@@ -48,14 +48,12 @@ func _physics_process(_delta):
 				pivot.scale.x = -direction
 			
 			if dist_archer > dist_attack:
-				print("walk")
 				playback.travel("walk")
 			
 			elif can_attack:
 				attack()
 				
 			elif velocity.x == 0:
-				print("idle")
 				playback.travel("idle")
 				
 				
@@ -72,7 +70,6 @@ func dead():
 	can_attack = false
 	can_be_damaged = false
 	is_dead = true
-	print("death")
 	playback.travel("death")
 	yield(get_tree().create_timer(1.5),"timeout")
 	queue_free()
@@ -80,9 +77,6 @@ func dead():
 	
 	
 func attack():
-#	velocity.x = 0
-#	velocity.y = 0
-	print("sword_attack")
 	playback.travel("sword_attack")
 	is_attacking = true
 	can_attack = false
@@ -91,7 +85,6 @@ func attack():
 
 func attack_timer():
 	time_to_attack.start()
-	print("entre")
 
 
 func take_damage(_dmg):
@@ -101,26 +94,30 @@ func take_damage(_dmg):
 		if current_health <= 0:
 			dead()	
 			
-		elif float(current_health)/max_hp <= 0.5:
+		elif get_hp_percent() > 0.25 and get_hp_percent() <= 0.75:
+			playback.travel("damage_taken")
 			SPEED = berserk_speed
 			
+		elif get_hp_percent() <= 0.25:
+			playback.travel("damage_taken")
+			SPEED = normal_speed
 		else:
-			print(animated_sprite.animation)
 			playback.travel("damage_taken")
 			can_be_damaged = false
 			inmunity_time.start()
 			
 	
 
+func get_hp_percent():
+	return float(current_health)/max_hp
+
 
 func _on_ArcherDetectionArea_body_entered(body):
 	if body.is_in_group("Player") and archer==null:
 		archer = body
-
 		
 
 func _on_Time_to_attack_timeout():
-	print("timeout")
 	can_attack = true
 	is_attacking = false
 
