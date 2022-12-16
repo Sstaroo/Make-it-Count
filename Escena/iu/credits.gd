@@ -9,7 +9,7 @@ onready var scroll_container = $ScrollContainer
 func _ready():
 	scroll_container.scroll_vertical = 0;
 	set_physics_process(false)
-	yield(get_tree().create_timer(1), "timeout")
+	yield(get_tree().create_timer(1.5), "timeout")
 	set_physics_process(true)
 
 func _physics_process(delta):
